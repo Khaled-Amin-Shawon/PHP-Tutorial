@@ -1,0 +1,39 @@
+name: PHP CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-versions: [ '8.2', '8.1', '8.0' ]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-versions }}
+        extensions: mbstring, xml, ctype, curl, dom
+        coverage: xdebug
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run PHPUnit tests
+      run: vendor/bin/phpunit
+
+    - name: Check PHP syntax
+      run: find . -type f -name "*.php" -exec php -l {} \;
+
+    - name: PHP CodeSniffer
+      run: vendor/bin/phpcs --standard=PSR12 src/
