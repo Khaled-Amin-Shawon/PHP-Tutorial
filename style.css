@@ -1,0 +1,147 @@
+/* style.css for PHP Tutorial */
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f4f6fb 100%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 240px;
+  background: linear-gradient(160deg, #eaf1ff 60%, #dbeafe 100%);
+  min-height: 100vh;
+  max-height: 100vh;
+  padding-top: 2rem;
+  box-shadow: 4px 0 24px rgba(79, 140, 255, 0.13);
+  border-right: 1.5px solid #d1d5db;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+.sidebar nav a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.7rem 1rem 0.7rem 0.5rem;
+  border-radius: 8px 0 0 8px;
+  transition: background 0.18s, color 0.18s, padding 0.18s, box-shadow 0.18s;
+  font-size: 1.08rem;
+  margin-bottom: 2px;
+  letter-spacing: 0.01em;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: linear-gradient(90deg, #4f8cff 70%, #2563eb 100%);
+  color: #fff;
+  padding-left: 1.2rem;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.1);
+}
+.content {
+  margin-left: 260px;
+  width: 100%;
+  min-height: 100vh;
+  background: none;
+}
+header {
+  background: linear-gradient(90deg, #4f8cff 60%, #2563eb 100%);
+  color: #fff;
+  padding: 2.2rem 0 1.2rem 0;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(79, 140, 255, 0.1);
+  border-radius: 0 0 18px 18px;
+}
+main {
+  max-width: 900px;
+  margin: 2.5rem auto 2rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 32px rgba(79, 140, 255, 0.1);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+}
+h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+h2,
+h3 {
+  color: #2563eb;
+  font-weight: 600;
+}
+pre {
+  background: #f0f4fa;
+  padding: 1.1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  border-left: 4px solid #4f8cff;
+}
+.section {
+  margin-bottom: 2.7rem;
+}
+.bangla {
+  font-family: "Noto Sans Bengali", Arial, sans-serif;
+  color: #1a5edb;
+}
+.example-output {
+  background: linear-gradient(90deg, #e0e7ff 60%, #f4f6fb 100%);
+  padding: 0.8rem 1.2rem;
+  border-radius: 7px;
+  margin-bottom: 1.1rem;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-size: 1.05rem;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.07);
+}
+footer {
+  text-align: center;
+  color: #888;
+  padding: 1.5rem 0 1rem 0;
+  font-size: 1.05rem;
+  background: none;
+}
+@media (max-width: 1100px) {
+  main {
+    max-width: 98vw;
+    padding: 1.2rem 0.7rem;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .sidebar {
+    position: static;
+    width: 100vw;
+    min-height: auto;
+    box-shadow: none;
+    padding-top: 0.5rem;
+    border-radius: 0;
+    max-height: none;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    font-size: 1.1rem;
+    padding: 1.2rem 0 0.7rem 0;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  main {
+    padding: 0.7rem 0.2rem;
+  }
+}
