@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP Operators - PHP Tutorial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav>
+        <a href="index.html">PHP HOME</a>
+        <a href="intro.html">PHP Intro</a>
+        <a href="install.html">PHP Install</a>
+        <a href="syntax.html">PHP Syntax</a>
+        <a href="comments.html">PHP Comments</a>
+        <a href="variables.html">PHP Variables</a>
+        <a href="echo-print.html">PHP Echo / Print</a>
+        <a href="datatypes.html">PHP Data Types</a>
+        <a href="strings.html">PHP Strings</a>
+        <a href="numbers.html">PHP Numbers</a>
+        <a href="casting.html">PHP Casting</a>
+        <a href="math.html">PHP Math</a>
+        <a href="constants.html">PHP Constants</a>
+        <a href="magic-constants.html">PHP Magic Constants</a>
+        <a href="operators.html">PHP Operators</a>
+        <a href="if-else.html">PHP If...Else...Elseif</a>
+        <a href="switch.html">PHP Switch</a>
+        <a href="loops.html">PHP Loops</a>
+        <a href="functions.html">PHP Functions</a>
+        <a href="arrays.html">PHP Arrays</a>
+      </nav>
+    </div>
+    <div class="content">
+      <header>
+        <h1>PHP Operators</h1>
+      </header>
+      <main>
+        <section class="section" id="operators">
+          <h2>Arithmetic Operators</h2>
+          <p>
+            Arithmetic operators are used to perform mathematical operations
+            like addition, subtraction, multiplication, etc.
+          </p>
+          <table
+            style="
+              width: 100%;
+              border-collapse: collapse;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <tr style="background: #f0f4fa">
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td style="text-align: center">+</td>
+              <td>Addition</td>
+              <td>$a + $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">-</td>
+              <td>Subtraction</td>
+              <td>$a - $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">*</td>
+              <td>Multiplication</td>
+              <td>$a * $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">/</td>
+              <td>Division</td>
+              <td>$a / $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">%</td>
+              <td>Modulus</td>
+              <td>$a % $b</td>
+            </tr>
+          </table>
+          <pre>
+&lt;?php
+$a = 10;
+$b = 3;
+echo $a + $b; // 13
+echo $a % $b; // 1
+?&gt;</pre
+          >
+
+          <h2>Assignment Operators</h2>
+          <p>Assignment operators are used to assign values to variables.</p>
+          <table
+            style="
+              width: 100%;
+              border-collapse: collapse;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <tr style="background: #f0f4fa">
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td style="text-align: center">=</td>
+              <td>Assign</td>
+              <td>$a = 5</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">+=</td>
+              <td>Add and assign</td>
+              <td>$a += 2</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">-=</td>
+              <td>Subtract and assign</td>
+              <td>$a -= 2</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">*=</td>
+              <td>Multiply and assign</td>
+              <td>$a *= 2</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">/=</td>
+              <td>Divide and assign</td>
+              <td>$a /= 2</td>
+            </tr>
+          </table>
+          <pre>
+&lt;?php
+$a = 5;
+$a += 3; // $a is now 8
+?&gt;</pre
+          >
+
+          <h2>Comparison Operators</h2>
+          <p>
+            Comparison operators are used to compare two values and return true
+            or false.
+          </p>
+          <table
+            style="
+              width: 100%;
+              border-collapse: collapse;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <tr style="background: #f0f4fa">
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td style="text-align: center">==</td>
+              <td>Equal</td>
+              <td>$a == $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">!=</td>
+              <td>Not equal</td>
+              <td>$a != $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">&lt;</td>
+              <td>Less than</td>
+              <td>$a &lt; $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">&gt;</td>
+              <td>Greater than</td>
+              <td>$a &gt; $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">&lt;=</td>
+              <td>Less than or equal</td>
+              <td>$a &lt;= $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">&gt;=</td>
+              <td>Greater than or equal</td>
+              <td>$a &gt;= $b</td>
+            </tr>
+          </table>
+          <pre>
+&lt;?php
+$a = 5;
+$b = 8;
+if ($a < $b) {
+    echo "a is less than b";
+}
+?&gt;</pre
+          >
+
+          <h2>Logical Operators</h2>
+          <p>Logical operators are used to combine conditional statements.</p>
+          <table
+            style="
+              width: 100%;
+              border-collapse: collapse;
+              margin-bottom: 1.2rem;
+            "
+          >
+            <tr style="background: #f0f4fa">
+              <th>Operator</th>
+              <th>Name</th>
+              <th>Example</th>
+            </tr>
+            <tr>
+              <td style="text-align: center">&&</td>
+              <td>And</td>
+              <td>$a && $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">||</td>
+              <td>Or</td>
+              <td>$a || $b</td>
+            </tr>
+            <tr>
+              <td style="text-align: center">!</td>
+              <td>Not</td>
+              <td>!$a</td>
+            </tr>
+          </table>
+          <pre>
+&lt;?php
+$a = true;
+$b = false;
+if ($a && !$b) {
+    echo "a is true and b is false";
+}
+?&gt;</pre
+          >
+
+          <div
+            class="note"
+            style="
+              background: #fef9c3;
+              border-left: 5px solid #facc15;
+              color: #7c5700;
+              padding: 1rem 1.2rem;
+              border-radius: 7px;
+              margin-bottom: 1.3rem;
+              font-size: 1.07rem;
+            "
+          >
+            <strong>Note:</strong> Operators are essential in PHP for performing
+            calculations, making comparisons, and controlling logic. Mastering
+            operators is key to writing effective PHP code.
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      This is Khaled's Tutorial 😎<br />
+      &copy; <span id="current-year"></span> PHP Tutorial. All rights
+      reserved.<br />
+      <div id="current-time">
+        Time: <span id="time-display"></span> | Date:
+        <span id="date-display"></span> | Day: <span id="day-display"></span>
+      </div>
+    </footer>
+
+    <script>
+      // Update time every second
+      function updateTime() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString("en-US", {
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        });
+        const dateString = now.toLocaleDateString("en-GB", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        });
+        const dayString = now.toLocaleDateString("en-US", { weekday: "long" });
+        const yearString = now.getFullYear();
+
+        document.getElementById("time-display").textContent = timeString;
+        document.getElementById("date-display").textContent = dateString;
+        document.getElementById("day-display").textContent = dayString;
+        document.getElementById("current-year").textContent = yearString;
+      }
+
+      // Update time immediately and then every second
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>

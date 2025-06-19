@@ -3,55 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PHP Tutorial</title>
+    <title>PHP Intro - PHP Tutorial</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        background: linear-gradient(120deg, #e0e7ff 0%, #f4f6fb 100%);
-        font-family: "Inter", Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-      }
-      .container {
-        background: #fff;
-        padding: 2.5rem 2rem;
-        border-radius: 18px;
-        box-shadow: 0 6px 32px rgba(79, 140, 255, 0.1);
-        text-align: center;
-      }
-      h1 {
-        color: #2563eb;
-        font-size: 2.2rem;
-        margin-bottom: 1rem;
-      }
-      p {
-        color: #333;
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-      }
-      a.button {
-        background: linear-gradient(90deg, #4f8cff 60%, #2563eb 100%);
-        color: #fff;
-        padding: 0.9rem 2.2rem;
-        border-radius: 8px;
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 600;
-        box-shadow: 0 2px 8px rgba(79, 140, 255, 0.1);
-        transition: background 0.2s;
-      }
-      a.button:hover {
-        background: #2563eb;
-      }
-    </style>
   </head>
   <body>
     <div class="sidebar">
@@ -80,37 +37,33 @@
     </div>
     <div class="content">
       <header>
-        <h1>PHP Tutorial</h1>
+        <h1>PHP Intro</h1>
       </header>
       <main>
-        <section class="section">
-          <h2>Welcome to PHP Tutorial</h2>
-          <p>
-            Welcome to our comprehensive PHP tutorial! This tutorial will guide
-            you through the fundamentals of PHP programming language.
-          </p>
+        <section class="section" id="intro">
+          <h2>PHP Intro</h2>
           <p>
             PHP (Hypertext Preprocessor) is a widely-used open source
-            general-purpose scripting language that is especially suited for web
-            development and can be embedded into HTML.
+            server-side scripting language especially suited for web development
+            and can be embedded into HTML.
           </p>
-          <div
-            class="note"
-            style="
-              background: #e0f2fe;
-              border-left: 5px solid #0288d1;
-              color: #01579b;
-              padding: 1rem 1.2rem;
-              border-radius: 7px;
-              margin: 1.3rem 0;
-              font-size: 1.07rem;
-            "
-          >
-            <strong>Note:</strong> This tutorial covers PHP basics, syntax,
-            variables, data types, operators, control structures, functions, and
-            arrays. Start with PHP Intro and follow the navigation to learn step
-            by step.
-          </div>
+          <ul>
+            <li>PHP files have the extension <code>.php</code></li>
+            <li>PHP code is executed on the server</li>
+            <li>PHP can generate dynamic page content</li>
+            <li>PHP can interact with databases</li>
+          </ul>
+          <p class="bangla">
+            PHP (Hypertext Preprocessor) একটি বহুল ব্যবহৃত ওপেন সোর্স
+            সার্ভার-সাইড স্ক্রিপ্টিং ভাষা, যা ওয়েব ডেভেলপমেন্টের জন্য বিশেষভাবে
+            উপযোগী এবং HTML-এ এমবেড করা যায়।
+          </p>
+          <ul class="bangla">
+            <li>PHP ফাইলের এক্সটেনশন <code>.php</code></li>
+            <li>PHP কোড সার্ভারে এক্সিকিউট হয়</li>
+            <li>PHP ডাইনামিক ওয়েব পেজ তৈরি করতে পারে</li>
+            <li>PHP ডাটাবেসের সাথে কাজ করতে পারে</li>
+          </ul>
         </section>
       </main>
     </div>

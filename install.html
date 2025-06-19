@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Install - PHP Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <a href="index.html">PHP HOME</a>
+            <a href="intro.html">PHP Intro</a>
+            <a href="install.html">PHP Install</a>
+            <a href="syntax.html">PHP Syntax</a>
+            <a href="comments.html">PHP Comments</a>
+            <a href="variables.html">PHP Variables</a>
+            <a href="echo-print.html">PHP Echo / Print</a>
+            <a href="datatypes.html">PHP Data Types</a>
+            <a href="strings.html">PHP Strings</a>
+            <a href="numbers.html">PHP Numbers</a>
+            <a href="casting.html">PHP Casting</a>
+            <a href="math.html">PHP Math</a>
+            <a href="constants.html">PHP Constants</a>
+            <a href="magic-constants.html">PHP Magic Constants</a>
+            <a href="operators.html">PHP Operators</a>
+            <a href="if-else.html">PHP If...Else...Elseif</a>
+            <a href="switch.html">PHP Switch</a>
+            <a href="loops.html">PHP Loops</a>
+            <a href="functions.html">PHP Functions</a>
+            <a href="arrays.html">PHP Arrays</a>
+        </nav>
+    </div>
+    <div class="content">
+        <header>
+            <h1>PHP Install</h1>
+        </header>
+        <main>
+            <header>
+        <h1>PHP Install</h1>
+    </header>
+    <main>
+        <section class="section" id="install">
+            <h2>PHP Install</h2>
+            <h3>How to Install PHP</h3>
+            <ol>
+                <li>Download XAMPP/WAMP/LAMP or PHP from the official website.</li>
+                <li>Install the software and start the Apache server.</li>
+                <li>Write your PHP files in the <code>htdocs</code> (XAMPP) or <code>www</code> (WAMP) folder.</li>
+                <li>Open your browser and go to <code>http://localhost/yourfile.php</code>.</li>
+            </ol>
+            <h3 class="bangla">à¦•à¦¿à¦­à¦¾à¦¬à§‡ PHP à¦‡à¦¨à¦¸à§à¦Ÿà¦² à¦•à¦°à¦¬à§‡à¦¨</h3>
+            <ol class="bangla">
+                <li>XAMPP/WAMP/LAMP à¦…à¦¥à¦¬à¦¾ à¦…à¦«à¦¿à¦¸à¦¿à¦¯à¦¼à¦¾à¦² à¦“à¦¯à¦¼à§‡à¦¬à¦¸à¦¾à¦‡à¦Ÿ à¦¥à§‡à¦•à§‡ PHP à¦¡à¦¾à¦‰à¦¨à¦²à§‹à¦¡ à¦•à¦°à§à¦¨à¥¤</li>
+                <li>à¦¸à¦«à¦Ÿà¦“à¦¯à¦¼à§à¦¯à¦¾à¦°à¦Ÿà¦¿ à¦‡à¦¨à¦¸à§à¦Ÿà¦² à¦•à¦°à§‡ Apache à¦¸à¦¾à¦°à§à¦­à¦¾à¦° à¦šà¦¾à¦²à§ à¦•à¦°à§à¦¨à¥¤</li>
+                <li>à¦†à¦ªà¦¨à¦¾à¦° PHP à¦«à¦¾à¦‡à¦² <code>htdocs</code> (XAMPP) à¦…à¦¥à¦¬à¦¾ <code>www</code> (WAMP) à¦«à§‹à¦²à§à¦¡à¦¾à¦°à§‡ à¦°à¦¾à¦–à§à¦¨à¥¤</li>
+                <li>à¦¬à§à¦°à¦¾à¦‰à¦œà¦¾à¦°à§‡ <code>http://localhost/yourfile.php</code> à¦²à¦¿à¦–à§‡ à¦“à¦ªà§‡à¦¨ à¦•à¦°à§à¦¨à¥¤</li>
+            </ol>
+        </section>
+    </main>
+<?php include 'footer.php'; ?> 
+        </main>
+    </div>
+    <footer>
+        This is Khaled's Tutorial ðŸ˜Ž<br>
+        &copy; <span id="current-year"></span> PHP Tutorial. All rights reserved.<br>
+        <div id="current-time">
+            Time: <span id="time-display"></span> | Date: <span id="date-display"></span> | Day: <span id="day-display"></span>
+        </div>
+    </footer>
+
+    <script>
+        // Update time every second
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            const dateString = now.toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
+            const yearString = now.getFullYear();
+
+            document.getElementById('time-display').textContent = timeString;
+            document.getElementById('date-display').textContent = dateString;
+            document.getElementById('day-display').textContent = dayString;
+            document.getElementById('current-year').textContent = yearString;
+        }
+
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

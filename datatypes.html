@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Data Types - PHP Tutorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <nav>
+            <a href="index.html">PHP HOME</a>
+            <a href="intro.html">PHP Intro</a>
+            <a href="install.html">PHP Install</a>
+            <a href="syntax.html">PHP Syntax</a>
+            <a href="comments.html">PHP Comments</a>
+            <a href="variables.html">PHP Variables</a>
+            <a href="echo-print.html">PHP Echo / Print</a>
+            <a href="datatypes.html">PHP Data Types</a>
+            <a href="strings.html">PHP Strings</a>
+            <a href="numbers.html">PHP Numbers</a>
+            <a href="casting.html">PHP Casting</a>
+            <a href="math.html">PHP Math</a>
+            <a href="constants.html">PHP Constants</a>
+            <a href="magic-constants.html">PHP Magic Constants</a>
+            <a href="operators.html">PHP Operators</a>
+            <a href="if-else.html">PHP If...Else...Elseif</a>
+            <a href="switch.html">PHP Switch</a>
+            <a href="loops.html">PHP Loops</a>
+            <a href="functions.html">PHP Functions</a>
+            <a href="arrays.html">PHP Arrays</a>
+        </nav>
+    </div>
+    <div class="content">
+        <header>
+            <h1>PHP Data Types</h1>
+        </header>
+        <main>
+            <header>
+        <h1>PHP Data Types</h1>
+    </header>
+    <main>
+        <section class="section" id="datatypes">
+            <h2>PHP Data Types</h2>
+            <p>PHP supports several data types, including:</p>
+            <ul>
+                <li><strong>String</strong> - sequence of characters</li>
+                <li><strong>Integer</strong> - whole numbers</li>
+                <li><strong>Float (double)</strong> - decimal numbers</li>
+                <li><strong>Boolean</strong> - true or false</li>
+                <li><strong>Array</strong> - collection of values</li>
+                <li><strong>Object</strong> - instance of a class</li>
+                <li><strong>NULL</strong> - variable with no value</li>
+                <li><strong>Resource</strong> - special variable holding a reference to an external resource</li>
+            </ul>
+            <pre>&lt;?php
+    $str = "Hello"; // String
+    $x = 10;        // Integer
+    $y = 10.5;      // Float
+    $b = true;      // Boolean
+    $arr = [1,2,3]; // Array
+    $obj = (object)["a" => 1]; // Object
+    $n = null;      // NULL
+?&gt;</pre>
+            <p class="bangla">PHP-à¦¤à§‡ à¦¨à¦¿à¦šà§‡à¦° à¦¡à§‡à¦Ÿà¦¾ à¦Ÿà¦¾à¦‡à¦ªà¦—à§à¦²à§‹ à¦†à¦›à§‡:</p>
+            <ul class="bangla">
+                <li><strong>String</strong> - à¦…à¦•à§à¦·à¦°à§‡à¦° à¦¸à¦¿à¦•à§‹à¦¯à¦¼à§‡à¦¨à§à¦¸</li>
+                <li><strong>Integer</strong> - à¦ªà§‚à¦°à§à¦£à¦¸à¦‚à¦–à§à¦¯à¦¾</li>
+                <li><strong>Float (double)</strong> - à¦¦à¦¶à¦®à¦¿à¦• à¦¸à¦‚à¦–à§à¦¯à¦¾</li>
+                <li><strong>Boolean</strong> - à¦¸à¦¤à§à¦¯ (true) à¦¬à¦¾ à¦®à¦¿à¦¥à§à¦¯à¦¾ (false)</li>
+                <li><strong>Array</strong> - à¦à¦•à¦¾à¦§à¦¿à¦• à¦®à¦¾à¦¨à§‡à¦° à¦¸à¦‚à¦—à§à¦°à¦¹</li>
+                <li><strong>Object</strong> - à¦•à§à¦²à¦¾à¦¸à§‡à¦° à¦‡à¦¨à¦¸à§à¦Ÿà§à¦¯à¦¾à¦¨à§à¦¸</li>
+                <li><strong>NULL</strong> - à¦•à§‹à¦¨à§‹ à¦®à¦¾à¦¨ à¦¨à§‡à¦‡</li>
+                <li><strong>Resource</strong> - à¦¬à¦¾à¦‡à¦°à§‡à¦° à¦•à§‹à¦¨à§‹ à¦°à¦¿à¦¸à§‹à¦°à§à¦¸à§‡à¦° à¦°à§‡à¦«à¦¾à¦°à§‡à¦¨à§à¦¸</li>
+            </ul>
+            <pre class="bangla">&lt;?php
+    $str = "à¦¹à§à¦¯à¦¾à¦²à§‹"; // String
+    $x = à§§à§¦;         // Integer
+    $y = à§§à§¦.à§«;       // Float
+    $b = true;       // Boolean
+    $arr = [à§§,à§¨,à§©];  // Array
+    $obj = (object)["a" => à§§]; // Object
+    $n = null;       // NULL
+?&gt;</pre>
+        </section>
+    </main>
+<?php include 'footer.php'; ?> 
+        </main>
+    </div>
+    <footer>
+        This is Khaled's Tutorial ðŸ˜Ž<br>
+        &copy; <span id="current-year"></span> PHP Tutorial. All rights reserved.<br>
+        <div id="current-time">
+            Time: <span id="time-display"></span> | Date: <span id="date-display"></span> | Day: <span id="day-display"></span>
+        </div>
+    </footer>
+
+    <script>
+        // Update time every second
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', {
+                hour12: false,
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            const dateString = now.toLocaleDateString('en-GB', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const dayString = now.toLocaleDateString('en-US', { weekday: 'long' });
+            const yearString = now.getFullYear();
+
+            document.getElementById('time-display').textContent = timeString;
+            document.getElementById('date-display').textContent = dateString;
+            document.getElementById('day-display').textContent = dayString;
+            document.getElementById('current-year').textContent = yearString;
+        }
+
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
