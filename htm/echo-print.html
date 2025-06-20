@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHP Echo / Print - PHP Tutorial</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div class="sidebar">
@@ -19,7 +19,7 @@
         <a href="syntax.html">PHP Syntax</a>
         <a href="comments.html">PHP Comments</a>
         <a href="variables.html">PHP Variables</a>
-        <a href="echo-print.html">PHP Echo / Print</a>
+        <a href="echo-print.html" class="active">PHP Echo / Print</a>
         <a href="datatypes.html">PHP Data Types</a>
         <a href="strings.html">PHP Strings</a>
         <a href="numbers.html">PHP Numbers</a>
@@ -38,22 +38,12 @@
     <div class="content">
       <header>
         <h1>PHP Echo / Print</h1>
+        <p>Learn how to output data in PHP</p>
       </header>
       <main>
         <section class="section" id="echo-print">
-          <div
-            class="note"
-            style="
-              background: #e0f2fe;
-              border-left: 5px solid #0288d1;
-              color: #01579b;
-              padding: 1rem 1.2rem;
-              border-radius: 7px;
-              margin-bottom: 1.3rem;
-              font-size: 1.07rem;
-            "
-          >
-            <strong>Note:</strong> Echo and Print are the two main output
+          <div class="note">
+            <strong>📝 Note:</strong> Echo and Print are the two main output
             statements in PHP. They are used to display text, variables, and
             HTML content to the browser. Understanding the differences between
             them is crucial for effective PHP programming.
@@ -85,39 +75,29 @@ print("Hello World!");
           </div>
 
           <h2>Key Differences Between Echo and Print</h2>
-          <table
-            style="
-              width: 100%;
-              border-collapse: collapse;
-              margin-bottom: 1.2rem;
-            "
-          >
-            <tr style="background: #f0f4fa">
+          <table>
+            <tr>
               <th>Feature</th>
               <th>Echo</th>
               <th>Print</th>
             </tr>
             <tr>
-              <td style="text-align: center"><strong>Return Value</strong></td>
+              <td><strong>Return Value</strong></td>
               <td>No return value (void)</td>
               <td>Always returns 1</td>
             </tr>
             <tr>
-              <td style="text-align: center">
-                <strong>Multiple Parameters</strong>
-              </td>
+              <td><strong>Multiple Parameters</strong></td>
               <td>Can output multiple values</td>
               <td>Can only output one value</td>
             </tr>
             <tr>
-              <td style="text-align: center"><strong>Performance</strong></td>
+              <td><strong>Performance</strong></td>
               <td>Slightly faster</td>
               <td>Slower than echo</td>
             </tr>
             <tr>
-              <td style="text-align: center">
-                <strong>Usage in Expressions</strong>
-              </td>
+              <td><strong>Usage in Expressions</strong></td>
               <td>Cannot be used in expressions</td>
               <td>Can be used in expressions</td>
             </tr>
@@ -255,18 +235,8 @@ foreach($fruits as $fruit) {
           </ul>
 
           <h2>Common Mistakes to Avoid</h2>
-          <div
-            class="warning"
-            style="
-              background: #fff3cd;
-              border-left: 5px solid #ffc107;
-              color: #856404;
-              padding: 1rem 1.2rem;
-              border-radius: 7px;
-              margin-bottom: 1.3rem;
-            "
-          >
-            <strong>Warning:</strong> Avoid these common pitfalls when using
+          <div class="warning">
+            <strong>⚠️ Warning:</strong> Avoid these common pitfalls when using
             echo and print.
           </div>
           <ul>
@@ -321,62 +291,16 @@ echo "&lt;/div&gt;";
 ?&gt;</pre
           >
 
-          <div
-            class="note"
-            style="
-              background: #d4edda;
-              border-left: 5px solid #28a745;
-              color: #155724;
-              padding: 1rem 1.2rem;
-              border-radius: 7px;
-              margin-top: 1.3rem;
-              font-size: 1.07rem;
-            "
-          >
-            <strong>Tip:</strong> Echo and Print are essential for any PHP
+          <div class="note">
+            <strong>💡 Tip:</strong> Echo and Print are essential for any PHP
             application. Master these output statements as they form the
             foundation of dynamic web content generation in PHP.
           </div>
         </section>
       </main>
     </div>
-    <footer>
-      This is Khaled's Tutorial 😎<br />
-      &copy; <span id="current-year"></span> PHP Tutorial. All rights
-      reserved.<br />
-      <div id="current-time">
-        Time: <span id="time-display"></span> | Date:
-        <span id="date-display"></span> | Day: <span id="day-display"></span>
-      </div>
-    </footer>
+    
 
-    <script>
-      // Update time every second
-      function updateTime() {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString("en-US", {
-          hour12: false,
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        });
-        const dateString = now.toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-        });
-        const dayString = now.toLocaleDateString("en-US", { weekday: "long" });
-        const yearString = now.getFullYear();
-
-        document.getElementById("time-display").textContent = timeString;
-        document.getElementById("date-display").textContent = dateString;
-        document.getElementById("day-display").textContent = dayString;
-        document.getElementById("current-year").textContent = yearString;
-      }
-
-      // Update time immediately and then every second
-      updateTime();
-      setInterval(updateTime, 1000);
-    </script>
+    
   </body>
 </html>

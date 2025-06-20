@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP Installation - PHP Tutorial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav>
+        <a href="index.html">PHP HOME</a>
+        <a href="intro.html">PHP Intro</a>
+        <a href="install.html" class="active">PHP Install</a>
+        <a href="syntax.html">PHP Syntax</a>
+        <a href="comments.html">PHP Comments</a>
+        <a href="variables.html">PHP Variables</a>
+        <a href="echo-print.html">PHP Echo / Print</a>
+        <a href="datatypes.html">PHP Data Types</a>
+        <a href="strings.html">PHP Strings</a>
+        <a href="numbers.html">PHP Numbers</a>
+        <a href="casting.html">PHP Casting</a>
+        <a href="math.html">PHP Math</a>
+        <a href="constants.html">PHP Constants</a>
+        <a href="magic-constants.html">PHP Magic Constants</a>
+        <a href="operators.html">PHP Operators</a>
+        <a href="if-else.html">PHP If...Else...Elseif</a>
+        <a href="switch.html">PHP Switch</a>
+        <a href="loops.html">PHP Loops</a>
+        <a href="functions.html">PHP Functions</a>
+        <a href="arrays.html">PHP Arrays</a>
+      </nav>
+    </div>
+    <div class="content">
+      <header>
+        <h1>PHP Installation Guide</h1>
+        <p>Set up your PHP development environment</p>
+      </header>
+      <main>
+        <section class="section" id="install">
+          <h2>How to Install PHP</h2>
+          <p>
+            PHP can be installed in several ways depending on your operating
+            system and requirements. The easiest way for beginners is to install
+            a complete web server package that includes PHP, MySQL, and Apache.
+          </p>
+
+          <div class="note">
+            <strong>🎯 Recommended:</strong> For beginners, we recommend
+            installing XAMPP, WAMP, or MAMP as they provide a complete
+            development environment with PHP, MySQL, and Apache server.
+          </div>
+
+          <h3>Method 1: XAMPP (Cross-Platform)</h3>
+          <p>
+            XAMPP is the most popular and easiest way to install PHP. It works
+            on Windows, macOS, and Linux.
+          </p>
+
+          <h4>Installation Steps:</h4>
+          <ol>
+            <li>
+              <strong>Download XAMPP:</strong> Visit
+              <a href="https://www.apachefriends.org/" target="_blank"
+                >apachefriends.org</a
+              >
+            </li>
+            <li>
+              <strong>Choose Version:</strong> Download the version for your
+              operating system
+            </li>
+            <li>
+              <strong>Run Installer:</strong> Execute the downloaded file and
+              follow the installation wizard
+            </li>
+            <li>
+              <strong>Start Services:</strong> Open XAMPP Control Panel and
+              start Apache and MySQL
+            </li>
+            <li>
+              <strong>Test Installation:</strong> Open browser and go to
+              <code>http://localhost</code>
+            </li>
+          </ol>
+
+          <h3>Method 2: WAMP (Windows)</h3>
+          <p>WAMP is specifically designed for Windows systems.</p>
+
+          <h4>Installation Steps:</h4>
+          <ol>
+            <li>
+              <strong>Download WAMP:</strong> Visit
+              <a href="https://www.wampserver.com/" target="_blank"
+                >wampserver.com</a
+              >
+            </li>
+            <li>
+              <strong>Install WAMP:</strong> Run the installer and follow the
+              setup process
+            </li>
+            <li>
+              <strong>Start WAMP:</strong> Launch WAMP from the system tray
+            </li>
+            <li>
+              <strong>Access Localhost:</strong> Go to
+              <code>http://localhost</code> in your browser
+            </li>
+          </ol>
+
+          <h3>Method 3: MAMP (macOS)</h3>
+          <p>MAMP is designed for macOS users.</p>
+
+          <h4>Installation Steps:</h4>
+          <ol>
+            <li>
+              <strong>Download MAMP:</strong> Visit
+              <a href="https://www.mamp.info/" target="_blank">mamp.info</a>
+            </li>
+            <li>
+              <strong>Install MAMP:</strong> Drag MAMP to Applications folder
+            </li>
+            <li>
+              <strong>Start MAMP:</strong> Open MAMP and click "Start Servers"
+            </li>
+            <li>
+              <strong>Access Web Server:</strong> Click "Open WebStart page" or
+              go to <code>http://localhost:8888</code>
+            </li>
+          </ol>
+
+          <h3>Method 4: Manual Installation</h3>
+          <p>For advanced users who want to install PHP manually:</p>
+
+          <h4>Windows Manual Installation:</h4>
+          <pre>
+# Download PHP from php.net
+# Extract to C:\php
+# Add C:\php to PATH environment variable
+# Configure php.ini file
+# Install Apache or Nginx web server</pre
+          >
+
+          <h4>Linux (Ubuntu/Debian):</h4>
+          <pre>
+sudo apt update
+sudo apt install php php-mysql apache2
+sudo systemctl start apache2
+sudo systemctl enable apache2</pre
+          >
+
+          <h4>macOS (using Homebrew):</h4>
+          <pre>
+brew install php
+brew services start php</pre
+          >
+
+          <h3>Testing Your PHP Installation</h3>
+          <p>
+            After installation, create a test file to verify PHP is working
+            correctly:
+          </p>
+
+          <pre>
+&lt;?php
+// Create a file named test.php in your web server directory
+echo "Hello, PHP is working!";
+echo "&lt;br&gt;";
+echo "PHP Version: " . phpversion();
+echo "&lt;br&gt;";
+echo "Current Date: " . date("Y-m-d H:i:s");
+?&gt;</pre
+          >
+
+          <div class="example-output">
+            Hello, PHP is working!<br />
+            PHP Version: <span id="php-version">8.x.x</span><br />
+            Current Date: <span id="current-date"></span>
+          </div>
+
+          <h3>Directory Structure</h3>
+          <p>
+            After installation, your web files should be placed in the
+            appropriate directory:
+          </p>
+
+          <ul>
+            <li>
+              <strong>XAMPP:</strong> <code>C:\xampp\htdocs\</code> (Windows) or
+              <code>/Applications/XAMPP/htdocs/</code> (macOS)
+            </li>
+            <li>
+              <strong>WAMP:</strong> <code>C:\wamp64\www\</code> or
+              <code>C:\wamp\www\</code>
+            </li>
+            <li>
+              <strong>MAMP:</strong> <code>/Applications/MAMP/htdocs/</code>
+            </li>
+            <li><strong>Linux Apache:</strong> <code>/var/www/html/</code></li>
+          </ul>
+
+          <div class="warning">
+            <strong>⚠️ Security Note:</strong> Never use development servers
+            (XAMPP, WAMP, MAMP) in production environments. They are designed
+            for development and testing only.
+          </div>
+
+          <h3>Next Steps</h3>
+          <p>Once PHP is installed and working:</p>
+          <ol>
+            <li>
+              <strong>Create Your First PHP File:</strong> Start with simple
+              examples
+            </li>
+            <li>
+              <strong>Learn PHP Syntax:</strong> Move to the PHP Syntax section
+            </li>
+            <li>
+              <strong>Practice Coding:</strong> Write and test your own PHP code
+            </li>
+            <li>
+              <strong>Explore Features:</strong> Learn about variables,
+              functions, and more
+            </li>
+          </ol>
+
+          <div class="note">
+            <strong>💡 Pro Tip:</strong> Keep your development environment
+            updated and always backup your projects. Consider using version
+            control (like Git) for your PHP projects.
+          </div>
+        </section>
+      </main>
+    </div>
+    
+
+    
+  </body>
+</html>

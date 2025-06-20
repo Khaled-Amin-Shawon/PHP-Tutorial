@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div class="sidebar">
@@ -257,43 +257,8 @@ if ($a && !$b) {
         </section>
       </main>
     </div>
-    <footer>
-      This is Khaled's Tutorial 😎<br />
-      &copy; <span id="current-year"></span> PHP Tutorial. All rights
-      reserved.<br />
-      <div id="current-time">
-        Time: <span id="time-display"></span> | Date:
-        <span id="date-display"></span> | Day: <span id="day-display"></span>
-      </div>
-    </footer>
+    
 
-    <script>
-      // Update time every second
-      function updateTime() {
-        const now = new Date();
-        const timeString = now.toLocaleTimeString("en-US", {
-          hour12: false,
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-        });
-        const dateString = now.toLocaleDateString("en-GB", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-        });
-        const dayString = now.toLocaleDateString("en-US", { weekday: "long" });
-        const yearString = now.getFullYear();
-
-        document.getElementById("time-display").textContent = timeString;
-        document.getElementById("date-display").textContent = dateString;
-        document.getElementById("day-display").textContent = dayString;
-        document.getElementById("current-year").textContent = yearString;
-      }
-
-      // Update time immediately and then every second
-      updateTime();
-      setInterval(updateTime, 1000);
-    </script>
+    
   </body>
 </html>

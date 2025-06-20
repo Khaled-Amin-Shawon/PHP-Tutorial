@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP Loops - PHP Tutorial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav>
+        <a href="index.html">PHP HOME</a>
+        <a href="intro.html">PHP Intro</a>
+        <a href="install.html">PHP Install</a>
+        <a href="syntax.html">PHP Syntax</a>
+        <a href="comments.html">PHP Comments</a>
+        <a href="variables.html">PHP Variables</a>
+        <a href="echo-print.html">PHP Echo / Print</a>
+        <a href="datatypes.html">PHP Data Types</a>
+        <a href="strings.html">PHP Strings</a>
+        <a href="numbers.html">PHP Numbers</a>
+        <a href="casting.html">PHP Casting</a>
+        <a href="math.html">PHP Math</a>
+        <a href="constants.html">PHP Constants</a>
+        <a href="magic-constants.html">PHP Magic Constants</a>
+        <a href="operators.html">PHP Operators</a>
+        <a href="if-else.html">PHP If...Else...Elseif</a>
+        <a href="switch.html">PHP Switch</a>
+        <a href="loops.html">PHP Loops</a>
+        <a href="functions.html">PHP Functions</a>
+        <a href="arrays.html">PHP Arrays</a>
+      </nav>
+    </div>
+    <div class="content">
+      <header>
+        <h1>PHP Loops</h1>
+      </header>
+      <main>
+        <section class="section" id="loops">
+          <h2>PHP Loops</h2>
+          <p>
+            Loops are used to execute the same block of code multiple times.
+            Common loops in PHP are <code>for</code>, <code>while</code>, and
+            <code>foreach</code>.
+          </p>
+          <h3>for loop</h3>
+          <pre>
+&lt;?php
+    for ($i = 1; $i <= 3; $i++) {
+        echo $i;
+    }
+?&gt;</pre
+          >
+          <div class="example-output">123</div>
+          <h3>while loop</h3>
+          <pre>
+&lt;?php
+    $i = 1;
+    while ($i <= 3) {
+        echo $i;
+        $i++;
+    }
+?&gt;</pre
+          >
+          <div class="example-output">123</div>
+          <h3>foreach loop</h3>
+          <pre>
+&lt;?php
+    $arr = ["a", "b", "c"];
+    foreach ($arr as $val) {
+        echo $val;
+    }
+?&gt;</pre
+          >
+          <div class="example-output">abc</div>
+          <p class="bangla">
+            একই কোড বারবার চালাতে লুপ ব্যবহার করা হয়। PHP-তে সাধারণত
+            <code>for</code>, <code>while</code>, <code>foreach</code> লুপ
+            ব্যবহৃত হয়।
+          </p>
+          <h3 class="bangla">for loop</h3>
+          <pre class="bangla">
+&lt;?php
+    for ($i = ১; $i <= ৩; $i++) {
+        echo $i;
+    }
+?&gt;</pre
+          >
+          <div class="example-output">১২৩</div>
+          <h3 class="bangla">while loop</h3>
+          <pre class="bangla">
+&lt;?php
+    $i = ১;
+    while ($i <= ৩) {
+        echo $i;
+        $i++;
+    }
+?&gt;</pre
+          >
+          <div class="example-output">১২৩</div>
+          <h3 class="bangla">foreach loop</h3>
+          <pre class="bangla">
+&lt;?php
+    $arr = ["ক", "খ", "গ"];
+    foreach ($arr as $val) {
+        echo $val;
+    }
+?&gt;</pre
+          >
+          <div class="example-output">কখগ</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
