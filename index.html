@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="sidebar">
+    <!-- Sidebar toggle for mobile -->
+<div class="sidebar-toggle">
+  <div class="hamburger"></div>
+</div>
+    <aside class="sidebar">
       <nav>
         <a href="index.html" class="active">PHP HOME</a>
         <a href="intro.html">PHP Intro</a>
@@ -34,7 +38,10 @@
         <a href="functions.html">PHP Functions</a>
         <a href="arrays.html">PHP Arrays</a>
       </nav>
-    </div>
+    </aside>
+    
+<!-- Overlay -->
+<div class="sidebar-overlay"></div>
     <div class="content">
       <header>
         <h1>PHP Tutorial</h1>
@@ -102,4 +109,33 @@
 
     
   </body>
+  <script>
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+    const navLinks = document.querySelectorAll('.sidebar nav a');
+  
+    // Toggle sidebar on button click
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+      sidebarOverlay.classList.toggle('active');
+    });
+  
+    // Hide sidebar when overlay is clicked
+    sidebarOverlay.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+    });
+  
+    // Auto-close sidebar when a link is clicked (mobile only)
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          sidebar.classList.remove('active');
+          sidebarOverlay.classList.remove('active');
+        }
+      });
+    });
+  </script>
+  
 </html>
