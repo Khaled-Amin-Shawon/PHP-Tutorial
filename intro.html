@@ -8,116 +8,136 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="sidebar">
-      <nav>
-        <a href="index.html">PHP HOME</a>
-        <a href="intro.html" class="active">PHP Intro</a>
-        <a href="install.html">PHP Install</a>
-        <a href="syntax.html">PHP Syntax</a>
-        <a href="comments.html">PHP Comments</a>
-        <a href="variables.html">PHP Variables</a>
-        <a href="echo-print.html">PHP Echo / Print</a>
-        <a href="datatypes.html">PHP Data Types</a>
-        <a href="strings.html">PHP Strings</a>
-        <a href="numbers.html">PHP Numbers</a>
-        <a href="casting.html">PHP Casting</a>
-        <a href="math.html">PHP Math</a>
-        <a href="constants.html">PHP Constants</a>
-        <a href="magic-constants.html">PHP Magic Constants</a>
-        <a href="operators.html">PHP Operators</a>
-        <a href="if-else.html">PHP If...Else...Elseif</a>
-        <a href="switch.html">PHP Switch</a>
-        <a href="loops.html">PHP Loops</a>
-        <a href="functions.html">PHP Functions</a>
-        <a href="arrays.html">PHP Arrays</a>
-      </nav>
-    </div>
-    <div class="content">
-      <header>
-        <h1>PHP Introduction</h1>
-        <p>Learn the fundamentals of PHP programming</p>
-      </header>
-      <main>
-        <section class="section" id="intro">
-          <h2>What is PHP?</h2>
-          <p>
-            PHP (Hypertext Preprocessor) is a widely-used open source
-            server-side scripting language especially suited for web development
-            and can be embedded into HTML. It's one of the most popular
-            programming languages for building dynamic websites and web
-            applications.
-          </p>
+    <div class="container">
+      <!-- Mobile Sidebar Toggle -->
+      <div class="sidebar-toggle" id="sidebarToggle">
+        <div class="hamburger"></div>
+      </div>
 
-          <div class="note">
-            <strong>🎯 Key Point:</strong> PHP is a server-side language,
-            meaning the code is executed on the server before the page is sent
-            to the browser. This makes it perfect for creating dynamic content
-            and interacting with databases.
+      <!-- Sidebar Overlay -->
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <nav>
+          <a href="index.html">PHP HOME</a>
+          <a href="intro.html" class="active">PHP Intro</a>
+          <a href="install.html">PHP Install</a>
+          <a href="syntax.html">PHP Syntax</a>
+          <a href="comments.html">PHP Comments</a>
+          <a href="variables.html">PHP Variables</a>
+          <a href="echo-print.html">PHP Echo / Print</a>
+          <a href="datatypes.html">PHP Data Types</a>
+          <a href="strings.html">PHP Strings</a>
+          <a href="numbers.html">PHP Numbers</a>
+          <a href="casting.html">PHP Casting</a>
+          <a href="math.html">PHP Math</a>
+          <a href="constants.html">PHP Constants</a>
+          <a href="magic-constants.html">PHP Magic Constants</a>
+          <a href="operators.html">PHP Operators</a>
+          <a href="if-else.html">PHP If...Else...Elseif</a>
+          <a href="switch.html">PHP Switch</a>
+          <a href="loops.html">PHP Loops</a>
+          <a href="functions.html">PHP Functions</a>
+          <a href="arrays.html">PHP Arrays</a>
+        </nav>
+      </aside>
+      <div class="content">
+        <header>
+          <!-- Header Sidebar Toggle Button -->
+          <div class="header-sidebar-toggle" id="headerSidebarToggle">
+            <div class="hamburger"></div>
           </div>
 
-          <h3>Why Choose PHP?</h3>
-          <ul>
-            <li>
-              <strong>Easy to Learn:</strong> PHP has a simple and intuitive
-              syntax that's easy for beginners to understand
-            </li>
-            <li>
-              <strong>Cross-Platform:</strong> PHP runs on Windows, Linux,
-              macOS, and other operating systems
-            </li>
-            <li>
-              <strong>Database Support:</strong> Excellent support for MySQL,
-              PostgreSQL, SQLite, and other databases
-            </li>
-            <li>
-              <strong>Large Community:</strong> Massive community with extensive
-              documentation and resources
-            </li>
-            <li>
-              <strong>Frameworks:</strong> Access to powerful frameworks like
-              Laravel, Symfony, CodeIgniter, and more
-            </li>
-          </ul>
+          <!-- Header Content -->
+          <div class="header-content">
+            <h1>PHP Introduction</h1>
+            <p>Learn the fundamentals of PHP programming</p>
+          </div>
+        </header>
+        <main>
+          <section class="section" id="intro">
+            <h2>What is PHP?</h2>
+            <p>
+              PHP (Hypertext Preprocessor) is a widely-used open source
+              server-side scripting language especially suited for web
+              development and can be embedded into HTML. It's one of the most
+              popular programming languages for building dynamic websites and
+              web applications.
+            </p>
 
-          <h3>What You Can Do with PHP</h3>
-          <ul>
-            <li>
-              <strong>Dynamic Websites:</strong> Create websites that change
-              content based on user input or database data
-            </li>
-            <li>
-              <strong>E-commerce Sites:</strong> Build online stores with
-              shopping carts and payment processing
-            </li>
-            <li>
-              <strong>Content Management:</strong> Develop CMS systems like
-              WordPress, Drupal, or Joomla
-            </li>
-            <li>
-              <strong>Web Applications:</strong> Create complex web applications
-              with user authentication and data processing
-            </li>
-            <li>
-              <strong>API Development:</strong> Build RESTful APIs for mobile
-              apps and other services
-            </li>
-          </ul>
+            <div class="note">
+              <strong>🎯 Key Point:</strong> PHP is a server-side language,
+              meaning the code is executed on the server before the page is sent
+              to the browser. This makes it perfect for creating dynamic content
+              and interacting with databases.
+            </div>
 
-          <h3>PHP File Characteristics</h3>
-          <ul>
-            <li>PHP files have the extension <code>.php</code></li>
-            <li>PHP code is executed on the server, not in the browser</li>
-            <li>PHP can generate dynamic page content</li>
-            <li>PHP can interact with databases</li>
-            <li>PHP can handle form data and file uploads</li>
-            <li>PHP can create, read, write, and delete files on the server</li>
-          </ul>
+            <h3>Why Choose PHP?</h3>
+            <ul>
+              <li>
+                <strong>Easy to Learn:</strong> PHP has a simple and intuitive
+                syntax that's easy for beginners to understand
+              </li>
+              <li>
+                <strong>Cross-Platform:</strong> PHP runs on Windows, Linux,
+                macOS, and other operating systems
+              </li>
+              <li>
+                <strong>Database Support:</strong> Excellent support for MySQL,
+                PostgreSQL, SQLite, and other databases
+              </li>
+              <li>
+                <strong>Large Community:</strong> Massive community with
+                extensive documentation and resources
+              </li>
+              <li>
+                <strong>Frameworks:</strong> Access to powerful frameworks like
+                Laravel, Symfony, CodeIgniter, and more
+              </li>
+            </ul>
 
-          <h3>Basic PHP Example</h3>
-          <pre>
+            <h3>What You Can Do with PHP</h3>
+            <ul>
+              <li>
+                <strong>Dynamic Websites:</strong> Create websites that change
+                content based on user input or database data
+              </li>
+              <li>
+                <strong>E-commerce Sites:</strong> Build online stores with
+                shopping carts and payment processing
+              </li>
+              <li>
+                <strong>Content Management:</strong> Develop CMS systems like
+                WordPress, Drupal, or Joomla
+              </li>
+              <li>
+                <strong>Web Applications:</strong> Create complex web
+                applications with user authentication and data processing
+              </li>
+              <li>
+                <strong>API Development:</strong> Build RESTful APIs for mobile
+                apps and other services
+              </li>
+            </ul>
+
+            <h3>PHP File Characteristics</h3>
+            <ul>
+              <li>PHP files have the extension <code>.php</code></li>
+              <li>PHP code is executed on the server, not in the browser</li>
+              <li>PHP can generate dynamic page content</li>
+              <li>PHP can interact with databases</li>
+              <li>PHP can handle form data and file uploads</li>
+              <li>
+                PHP can create, read, write, and delete files on the server
+              </li>
+            </ul>
+
+            <h3>Basic PHP Example</h3>
+            <pre>
 &lt;?php
 // This is a simple PHP example
 $name = "World";
@@ -133,47 +153,46 @@ $currentTime = date("H:i:s");
     &lt;p&gt;Current time: &lt;?php echo $currentTime; ?&gt;&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre
-          >
+            >
 
-          <div class="example-output">
-            Hello, World!<br /><br />
-            <strong>HTML Output:</strong><br />
-            <h1>Welcome to PHP</h1>
-            <p>Current time: <span id="demo-time"></span></p>
-          </div>
+            <div class="example-output">
+              Hello, World!<br /><br />
+              <strong>HTML Output:</strong><br />
+              <h1>Welcome to PHP</h1>
+              <p>Current time: <span id="demo-time"></span></p>
+            </div>
 
-          <div class="warning">
-            <strong>⚠️ Important:</strong> PHP code must be processed by a web
-            server with PHP support. You cannot run PHP files directly in a
-            browser like HTML files.
-          </div>
+            <div class="warning">
+              <strong>⚠️ Important:</strong> PHP code must be processed by a web
+              server with PHP support. You cannot run PHP files directly in a
+              browser like HTML files.
+            </div>
 
-          <h3>Getting Started</h3>
-          <p>To start learning PHP, you'll need:</p>
-          <ol>
-            <li>
-              <strong>Web Server:</strong> Install XAMPP, WAMP, or similar local
-              server environment
-            </li>
-            <li>
-              <strong>Text Editor:</strong> Use VS Code, Sublime Text, or any
-              code editor
-            </li>
-            <li>
-              <strong>Browser:</strong> Any modern web browser for testing
-            </li>
-          </ol>
+            <h3>Getting Started</h3>
+            <p>To start learning PHP, you'll need:</p>
+            <ol>
+              <li>
+                <strong>Web Server:</strong> Install XAMPP, WAMP, or similar
+                local server environment
+              </li>
+              <li>
+                <strong>Text Editor:</strong> Use VS Code, Sublime Text, or any
+                code editor
+              </li>
+              <li>
+                <strong>Browser:</strong> Any modern web browser for testing
+              </li>
+            </ol>
 
-          <div class="note">
-            <strong>💡 Pro Tip:</strong> Start with the PHP Install section to
-            set up your development environment, then move through the tutorial
-            step by step. Practice coding along with each example!
-          </div>
-        </section>
-      </main>
+            <div class="note">
+              <strong>💡 Pro Tip:</strong> Start with the PHP Install section to
+              set up your development environment, then move through the
+              tutorial step by step. Practice coding along with each example!
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
-    
-
-    
+    <script src="script.js"></script>
   </body>
 </html>
