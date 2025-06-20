@@ -41,6 +41,13 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+h3,h2,h4{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(90deg, var(--color-accent), #ffecb3 80%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 /* ===== LAYOUT ===== */
 .container {
