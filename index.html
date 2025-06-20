@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button id="toggleBtn">☰ Menu</button>
     <!-- Sidebar toggle for mobile -->
 <div class="sidebar-toggle">
   <div class="hamburger"></div>
@@ -107,35 +108,7 @@
     </div>
     
 
-    
+    <script src="script.js"></script>
   </body>
-  <script>
-    const sidebar = document.querySelector('.sidebar');
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
-    const sidebarOverlay = document.querySelector('.sidebar-overlay');
-    const navLinks = document.querySelectorAll('.sidebar nav a');
-  
-    // Toggle sidebar on button click
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-      sidebarOverlay.classList.toggle('active');
-    });
-  
-    // Hide sidebar when overlay is clicked
-    sidebarOverlay.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-      sidebarOverlay.classList.remove('active');
-    });
-  
-    // Auto-close sidebar when a link is clicked (mobile only)
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          sidebar.classList.remove('active');
-          sidebarOverlay.classList.remove('active');
-        }
-      });
-    });
-  </script>
   
 </html>

@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <button id="toggleBtn">☰ Menu</button>
     <div class="sidebar">
       <nav>
         <a href="index.html">PHP HOME</a>
         <a href="intro.html">PHP Intro</a>
         <a href="install.html">PHP Install</a>
-        <a href="syntax.html">PHP Syntax</a>
+        <a href="syntax.html"  class="active">PHP Syntax</a>
         <a href="comments.html">PHP Comments</a>
         <a href="variables.html">PHP Variables</a>
         <a href="echo-print.html">PHP Echo / Print</a>
@@ -52,12 +53,46 @@
     echo "Hello, World!";
 ?&gt;</pre
           >
+
+          <!--  PHP Case Sensitivity-->
+          <h3>PHP Case Sensitivity</h3>
+          <p>
+            In PHP, variable names are <strong>case-sensitive</strong>, but
+            function names and keywords are <strong>not case-sensitive</strong>.
+          </p>
+          <ul>
+            <li>
+              <strong>Variables:</strong> <code>$name</code> and
+              <code>$NAME</code> are different variables.
+            </li>
+            <li>
+              <strong>Functions &amp; Keywords:</strong> <code>echo</code>,
+              <code>ECHO</code>, and <code>EcHo</code> all work the same.
+            </li>
+          </ul>
+          <pre>
+&lt;?php
+$color = "red";
+$Color = "blue";
+echo $color; // Outputs: red
+echo $Color; // Outputs: blue
+
+ECHO "This is valid!"; // Outputs: This is valid!
+echo "This is also valid!"; // Outputs: This is also valid!
+?&gt;
+        </pre
+          >
           <p class="bangla">
-            সব PHP কোড <code>&lt;?php ... ?&gt;</code> ট্যাগের মধ্যে লিখতে হয়
-            এবং প্রতিটি স্টেটমেন্ট শেষে <code>;</code> দিতে হয়।
+            PHP-তে ভ্যারিয়েবল (যেমন <code>$name</code>)
+            <strong>কেস-সেন্সিটিভ</strong>, অর্থাৎ <code>$name</code> এবং
+            <code>$NAME</code> আলাদা ভ্যারিয়েবল। কিন্তু ফাংশন ও কিওয়ার্ড (যেমন
+            <code>echo</code>) <strong>কেস-ইনসেন্সিটিভ</strong>, অর্থাৎ
+            <code>echo</code>, <code>ECHO</code> বা <code>EcHo</code> একই কাজ
+            করবে।
           </p>
         </section>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Toggle Button for Mobile -->
+    <button id="toggleBtn">☰ Menu</button>
+
+    <!-- Sidebar -->
     <div class="sidebar">
       <nav>
         <a href="index.html">PHP HOME</a>
@@ -22,7 +26,7 @@
         <a href="echo-print.html">PHP Echo / Print</a>
         <a href="datatypes.html">PHP Data Types</a>
         <a href="strings.html">PHP Strings</a>
-        <a href="numbers.html">PHP Numbers</a>
+        <a href="numbers.html" class="active">PHP Numbers</a>
         <a href="casting.html">PHP Casting</a>
         <a href="math.html">PHP Math</a>
         <a href="constants.html">PHP Constants</a>
@@ -35,6 +39,8 @@
         <a href="arrays.html">PHP Arrays</a>
       </nav>
     </div>
+
+    <!-- Main Content -->
     <div class="content">
       <header>
         <h1>PHP Numbers</h1>
@@ -54,9 +60,9 @@
     $mul = $a * $b;
     echo $sum;    // 14.5
     echo $mul;    // 45
-?&gt;</pre
-          >
+?&gt;</pre>
           <div class="example-output">14.5<br />45</div>
+
           <p class="bangla">
             PHP-তে integer (পূর্ণসংখ্যা) ও float (দশমিক সংখ্যা) আছে। গাণিতিক
             অপারেটর ব্যবহার করে হিসাব করা যায়।
@@ -69,11 +75,12 @@
     $mul = $a * $b;
     echo $sum;    // ১৪.৫
     echo $mul;    // ৪৫
-?&gt;</pre
-          >
+?&gt;</pre>
           <div class="example-output">১৪.৫<br />৪৫</div>
         </section>
       </main>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

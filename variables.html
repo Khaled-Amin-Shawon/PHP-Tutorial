@@ -11,85 +11,127 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Mobile Sidebar Toggle -->
-      <div class="sidebar-toggle" id="sidebarToggle">
-        <div class="hamburger"></div>
-      </div>
+    <!-- Menu Toggle Button for Mobile -->
+    <button id="toggleBtn">☰ Menu</button>
 
-      <!-- Sidebar Overlay -->
-      <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-      <!-- Sidebar -->
-      <aside class="sidebar" id="sidebar">
-        <nav>
-          <a href="index.html">PHP HOME</a>
-          <a href="intro.html">PHP Intro</a>
-          <a href="install.html">PHP Install</a>
-          <a href="syntax.html">PHP Syntax</a>
-          <a href="comments.html">PHP Comments</a>
-          <a href="variables.html" class="active">PHP Variables</a>
-          <a href="echo-print.html">PHP Echo / Print</a>
-          <a href="datatypes.html">PHP Data Types</a>
-          <a href="strings.html">PHP Strings</a>
-          <a href="numbers.html">PHP Numbers</a>
-          <a href="casting.html">PHP Casting</a>
-          <a href="math.html">PHP Math</a>
-          <a href="constants.html">PHP Constants</a>
-          <a href="magic-constants.html">PHP Magic Constants</a>
-          <a href="operators.html">PHP Operators</a>
-          <a href="if-else.html">PHP If...Else...Elseif</a>
-          <a href="switch.html">PHP Switch</a>
-          <a href="loops.html">PHP Loops</a>
-          <a href="functions.html">PHP Functions</a>
-          <a href="arrays.html">PHP Arrays</a>
-        </nav>
-      </aside>
-
-      <main>
-        <header>
-          <!-- Header Sidebar Toggle Button -->
-          <div class="header-sidebar-toggle" id="headerSidebarToggle">
-            <div class="hamburger"></div>
-          </div>
-
-          <!-- Header Content -->
-          <div class="header-content">
-            <h1>PHP Variables</h1>
-            <p>Learn about variables in PHP programming</p>
-          </div>
-        </header>
-        <div class="content">
-          <section class="section" id="variables">
-            <h2>PHP Variables</h2>
-            <p>
-              Variables in PHP start with a <code>$</code> sign, followed by the
-              variable name. They are used to store data.
-            </p>
-            <pre>
-&lt;?php
-    $txt = "Hello World!";
-    $x = 5;
-    $y = 10.5;
-    echo $txt;
-?&gt;</pre
-            >
-            <p class="bangla">
-              PHP-তে ভেরিয়েবল <code>$</code> চিহ্ন দিয়ে শুরু হয় এবং ডেটা
-              সংরক্ষণে ব্যবহৃত হয়।
-            </p>
-            <pre class="bangla">
-&lt;?php
-    $txt = "হ্যালো ওয়ার্ল্ড!";
-    $x = ৫;
-    $y = ১০.৫;
-    echo $txt;
-?&gt;</pre
-            >
-          </section>
-        </div>
-      </main>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <nav>
+        <a href="index.html">PHP HOME</a>
+        <a href="intro.html">PHP Intro</a>
+        <a href="install.html">PHP Install</a>
+        <a href="syntax.html">PHP Syntax</a>
+        <a href="comments.html">PHP Comments</a>
+        <a href="variables.html" class="active">PHP Variables</a>
+        <a href="echo-print.html">PHP Echo / Print</a>
+        <a href="datatypes.html">PHP Data Types</a>
+        <a href="strings.html">PHP Strings</a>
+        <a href="numbers.html">PHP Numbers</a>
+        <a href="casting.html">PHP Casting</a>
+        <a href="math.html">PHP Math</a>
+        <a href="constants.html">PHP Constants</a>
+        <a href="magic-constants.html">PHP Magic Constants</a>
+        <a href="operators.html">PHP Operators</a>
+        <a href="if-else.html">PHP If...Else...Elseif</a>
+        <a href="switch.html">PHP Switch</a>
+        <a href="loops.html">PHP Loops</a>
+        <a href="functions.html">PHP Functions</a>
+        <a href="arrays.html">PHP Arrays</a>
+      </nav>
     </div>
+
+    <main>
+      <header>
+        <!-- Header Sidebar Toggle Button -->
+        <div class="header-sidebar-toggle" id="headerSidebarToggle">
+          <div class="hamburger"></div>
+        </div>
+
+        <!-- Header Content -->
+        <div class="header-content">
+          <h1>PHP Variables</h1>
+          <p>Learn about variables in PHP programming</p>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="section" id="variables">
+          <h2>PHP Variables</h2>
+
+          <p>
+            In PHP, a <strong>variable</strong> is used to store information that can be used and changed throughout your script. Variable names can be short (like <code>$x</code>, <code>$y</code>) or more descriptive (like <code>$age</code>, <code>$carname</code>, <code>$total_volume</code>).
+          </p>
+
+          <h3>Rules for PHP Variables</h3>
+          <ul>
+            <li>A variable starts with the <code>$</code> sign, followed by the name of the variable</li>
+            <li>A variable name must start with a letter or the underscore character (<code>_</code>)</li>
+            <li>A variable name cannot start with a number</li>
+            <li>A variable name can only contain alpha-numeric characters and underscores (<code>A-z</code>, <code>0-9</code>, and <code>_</code>)</li>
+            <li>Variable names are <strong>case-sensitive</strong> (<code>$age</code> and <code>$AGE</code> are different variables)</li>
+          </ul>
+
+          <h4>Example:</h4>
+          <pre>
+&lt;?php
+$txt = "Hello, World!";
+$x = 5;
+$y = 10.5;
+
+echo $txt; // Outputs: Hello, World!
+echo $x;   // Outputs: 5
+echo $y;   // Outputs: 10.5
+?&gt;
+          </pre>
+
+          <h4>Valid and Invalid Variable Names</h4>
+          <ul>
+            <li><code>$name</code> <span style="color:green;">✔️ valid</span></li>
+            <li><code>$_name</code> <span style="color:green;">✔️ valid</span></li>
+            <li><code>$name1</code> <span style="color:green;">✔️ valid</span></li>
+            <li><code>$1name</code> <span style="color:red;">❌ invalid</span></li>
+            <li><code>$na-me</code> <span style="color:red;">❌ invalid</span></li>
+            <li><code>$na me</code> <span style="color:red;">❌ invalid</span></li>
+          </ul>
+
+          <p class="bangla">
+            PHP-তে ভ্যারিয়েবল ডিক্লেয়ার করতে <code>$</code> চিহ্ন দিয়ে শুরু করতে হয়। ভ্যারিয়েবল নাম অবশ্যই একটি অক্ষর বা আন্ডারস্কোর (<code>_</code>) দিয়ে শুরু হবে, সংখ্যা দিয়ে শুরু করা যাবে না। নামের মধ্যে শুধু অক্ষর, সংখ্যা ও আন্ডারস্কোর থাকতে পারে। ভ্যারিয়েবল নাম <strong>কেস-সেন্সিটিভ</strong>, অর্থাৎ <code>$age</code> এবং <code>$AGE</code> আলাদা ভ্যারিয়েবল।
+          </p>
+
+          <h3>Output Variables</h3>
+          <p>
+            You can output the value of a variable in PHP using the <code>echo</code> or <code>print</code> statement.
+          </p>
+          <pre>
+&lt;?php
+$txt = "PHP is awesome!";
+echo $txt; // Outputs: PHP is awesome!
+?&gt;
+          </pre>
+
+          <h3>PHP is a Loosely Typed Language</h3>
+          <p>
+            In the example above, notice that we did not have to tell PHP which data type the variable is.
+          </p>
+          <p>
+            PHP automatically associates a data type to the variable, depending on its value. Since the data types are not set in a strict sense, you can do things like adding a string to an integer without causing an error.
+          </p>
+          <pre>
+&lt;?php
+$x = 5;         // integer
+$y = "10 cats"; // string
+
+$z = $x + $y;   // $y is converted to integer (10), so $z = 15
+
+echo $z; // Outputs: 15
+?&gt;
+          </pre>
+          <p class="bangla">
+            PHP একটি <strong>loosely typed</strong> ভাষা, অর্থাৎ ভ্যারিয়েবল ডিক্লেয়ার করার সময় ডেটা টাইপ আলাদাভাবে জানাতে হয় না। PHP নিজে থেকেই ভ্যালু দেখে টাইপ নির্ধারণ করে। তাই আপনি চাইলে স্ট্রিং ও নাম্বার একসাথে যোগ করতে পারেন, PHP স্বয়ংক্রিয়ভাবে কনভার্ট করে নেয়।
+          </p>
+        </section>
+      </div>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

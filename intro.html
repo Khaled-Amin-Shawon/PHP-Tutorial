@@ -11,40 +11,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- Mobile Sidebar Toggle -->
-      <div class="sidebar-toggle" id="sidebarToggle">
-        <div class="hamburger"></div>
-      </div>
+     <!-- Menu Toggle Button for Mobile -->
+     <button id="toggleBtn">☰ Menu</button>
 
-      <!-- Sidebar Overlay -->
-      <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-      <!-- Sidebar -->
-      <aside class="sidebar" id="sidebar">
-        <nav>
-          <a href="index.html">PHP HOME</a>
-          <a href="intro.html" class="active">PHP Intro</a>
-          <a href="install.html">PHP Install</a>
-          <a href="syntax.html">PHP Syntax</a>
-          <a href="comments.html">PHP Comments</a>
-          <a href="variables.html">PHP Variables</a>
-          <a href="echo-print.html">PHP Echo / Print</a>
-          <a href="datatypes.html">PHP Data Types</a>
-          <a href="strings.html">PHP Strings</a>
-          <a href="numbers.html">PHP Numbers</a>
-          <a href="casting.html">PHP Casting</a>
-          <a href="math.html">PHP Math</a>
-          <a href="constants.html">PHP Constants</a>
-          <a href="magic-constants.html">PHP Magic Constants</a>
-          <a href="operators.html">PHP Operators</a>
-          <a href="if-else.html">PHP If...Else...Elseif</a>
-          <a href="switch.html">PHP Switch</a>
-          <a href="loops.html">PHP Loops</a>
-          <a href="functions.html">PHP Functions</a>
-          <a href="arrays.html">PHP Arrays</a>
-        </nav>
-      </aside>
+     <!-- Sidebar -->
+     <div class="sidebar" id="sidebar">
+       <nav>
+         <a href="index.html" class="active">PHP HOME</a>
+         <a href="intro.html">PHP Intro</a>
+         <a href="install.html">PHP Install</a>
+         <a href="syntax.html">PHP Syntax</a>
+         <a href="comments.html">PHP Comments</a>
+         <a href="variables.html">PHP Variables</a>
+         <a href="echo-print.html">PHP Echo / Print</a>
+         <a href="datatypes.html">PHP Data Types</a>
+         <a href="strings.html">PHP Strings</a>
+         <a href="numbers.html">PHP Numbers</a>
+         <a href="casting.html">PHP Casting</a>
+         <a href="math.html">PHP Math</a>
+         <a href="constants.html">PHP Constants</a>
+         <a href="magic-constants.html">PHP Magic Constants</a>
+         <a href="operators.html">PHP Operators</a>
+         <a href="if-else.html">PHP If...Else...Elseif</a>
+         <a href="switch.html">PHP Switch</a>
+         <a href="loops.html">PHP Loops</a>
+         <a href="functions.html">PHP Functions</a>
+         <a href="arrays.html">PHP Arrays</a>
+       </nav>
+     </div>
+ 
       <div class="content">
         <header>
           <!-- Header Sidebar Toggle Button -->
@@ -75,6 +70,59 @@
               to the browser. This makes it perfect for creating dynamic content
               and interacting with databases.
             </div>
+            <h3>What is a PHP File?</h3>
+            <pre>
+              PHP files can contain text, HTML, CSS, JavaScript, and PHP code
+              PHP code is executed on the server, and the result is returned to the browser as plain HTML
+              PHP files have extension ".php"</pre
+            >
+            <h3>What Can PHP Do?</h3>
+            <ul>
+              <li>
+                PHP can generate dynamic page content<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP ডাইনামিক পেজ কনটেন্ট তৈরি করতে পারে</span
+                >
+              </li>
+              <li>
+                PHP can create, open, read, write, delete, and close files on
+                the server<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP সার্ভারে ফাইল তৈরি, ওপেন, পড়া, লেখা, ডিলিট এবং ক্লোজ
+                  করতে পারে</span
+                >
+              </li>
+              <li>
+                PHP can collect form data<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP ফর্ম ডেটা সংগ্রহ করতে পারে</span
+                >
+              </li>
+              <li>
+                PHP can send and receive cookies<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP কুকি পাঠাতে ও গ্রহণ করতে পারে</span
+                >
+              </li>
+              <li>
+                PHP can add, delete, modify data in your database<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP আপনার ডাটাবেজে ডেটা যোগ, ডিলিট ও পরিবর্তন করতে পারে</span
+                >
+              </li>
+              <li>
+                PHP can be used to control user-access<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP ইউজার-অ্যাক্সেস নিয়ন্ত্রণে ব্যবহার করা যায়</span
+                >
+              </li>
+              <li>
+                PHP can encrypt data<br /><span
+                  style="font-family: 'Noto Sans Bengali', sans-serif"
+                  >PHP ডেটা এনক্রিপ্ট করতে পারে</span
+                >
+              </li>
+            </ul>
 
             <h3>Why Choose PHP?</h3>
             <ul>
@@ -100,7 +148,7 @@
               </li>
             </ul>
 
-            <h3>What You Can Do with PHP</h3>
+            <h3>Use Of PHP</h3>
             <ul>
               <li>
                 <strong>Dynamic Websites:</strong> Create websites that change
