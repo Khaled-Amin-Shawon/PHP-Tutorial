@@ -85,7 +85,7 @@ body {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-  background: var(--color-accent);
+  background: linear-gradient(90deg, var(--color-accent), #ffecb3 80%);
   color: #000;
 }
 #toggleBtn {

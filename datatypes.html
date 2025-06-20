@@ -42,54 +42,207 @@
       </header>
       <main>
         <section class="section" id="datatypes">
-          <h2>PHP Data Types</h2>
-          <p>PHP supports several data types, including:</p>
+          <h3>PHP Variable Types</h3>
+          <p>PHP supports several different data types for variables:</p>
           <ul>
-            <li><strong>String</strong> - sequence of characters</li>
-            <li><strong>Integer</strong> - whole numbers</li>
-            <li><strong>Float (double)</strong> - decimal numbers</li>
-            <li><strong>Boolean</strong> - true or false</li>
-            <li><strong>Array</strong> - collection of values</li>
-            <li><strong>Object</strong> - instance of a class</li>
-            <li><strong>NULL</strong> - variable with no value</li>
             <li>
-              <strong>Resource</strong> - special variable holding a reference
-              to an external resource
+              <strong>String</strong> – a sequence of characters, e.g.
+              <code>"Hello"</code>
+            </li>
+            <li>
+              <strong>Integer</strong> – whole numbers, e.g. <code>42</code>
+            </li>
+            <li>
+              <strong>Float</strong> (or double) – numbers with decimals, e.g.
+              <code>3.14</code>
+            </li>
+            <li>
+              <strong>Boolean</strong> – <code>true</code> or <code>false</code>
+            </li>
+            <li>
+              <strong>Array</strong> – a collection of values, e.g.
+              <code>array(1, 2, 3)</code>
+            </li>
+            <li><strong>Object</strong> – an instance of a class</li>
+            <li><strong>NULL</strong> – a variable with no value</li>
+            <li>
+              <strong>Resource</strong> – a special variable holding a reference
+              to an external resource (like a database connection)
             </li>
           </ul>
           <pre>
 &lt;?php
-    $str = "Hello"; // String
-    $x = 10;        // Integer
-    $y = 10.5;      // Float
-    $b = true;      // Boolean
-    $arr = [1,2,3]; // Array
-    $obj = (object)["a" => 1]; // Object
-    $n = null;      // NULL
-?&gt;</pre
+// String
+$name = "Alice";
+
+// Integer
+$age = 30;
+
+// Float
+$price = 19.99;
+
+// Boolean
+$is_admin = true;
+
+// Array
+$colors = array("red", "green", "blue");
+
+// Object
+class Car {
+    public $model;
+    function __construct($model) {
+        $this->model = $model;
+    }
+}
+$myCar = new Car("Toyota");
+
+// NULL
+$nothing = NULL;
+?&gt;
+        </pre
           >
-          <p class="bangla">PHP-তে নিচের ডেটা টাইপগুলো আছে:</p>
-          <ul class="bangla">
-            <li><strong>String</strong> - অক্ষরের সিকোয়েন্স</li>
-            <li><strong>Integer</strong> - পূর্ণসংখ্যা</li>
-            <li><strong>Float (double)</strong> - দশমিক সংখ্যা</li>
-            <li><strong>Boolean</strong> - সত্য (true) বা মিথ্যা (false)</li>
-            <li><strong>Array</strong> - একাধিক মানের সংগ্রহ</li>
-            <li><strong>Object</strong> - ক্লাসের ইনস্ট্যান্স</li>
-            <li><strong>NULL</strong> - কোনো মান নেই</li>
-            <li><strong>Resource</strong> - বাইরের কোনো রিসোর্সের রেফারেন্স</li>
-          </ul>
-          <pre class="bangla">
+          <h3>Get the Type of a Variable</h3>
+          <p>
+            You can use the <code>gettype()</code> function in PHP to find out
+            the type of a variable.
+          </p>
+          <pre>
 &lt;?php
-    $str = "হ্যালো"; // String
-    $x = ১০;         // Integer
-    $y = ১০.৫;       // Float
-    $b = true;       // Boolean
-    $arr = [১,২,৩];  // Array
-    $obj = (object)["a" => ১]; // Object
-    $n = null;       // NULL
-?&gt;</pre
+$var = "Hello, World!";
+echo gettype($var); // Outputs: string
+?&gt;
+        </pre
           >
+        <h3>PHP Integer</h3>
+        <p>
+          An <strong>integer</strong> is a whole number (positive, negative, or zero) without decimals. In PHP, integers can be specified in decimal, hexadecimal, or octal notation.
+        </p>
+        <pre>
+&lt;?php
+$x = 42;         // decimal number
+$y = 0x2A;       // hexadecimal number (42 in decimal)
+$z = 052;        // octal number (42 in decimal)
+
+echo $x; // Outputs: 42
+echo $y; // Outputs: 42
+echo $z; // Outputs: 42
+?&gt;
+        </pre>
+        <p class="bangla">
+          <strong>ইন্টিজার</strong> হচ্ছে সম্পূর্ণ সংখ্যা (দশমিক ছাড়া)। PHP-তে ইন্টিজার দশমিক, হেক্সাডেসিমাল বা অক্টাল ফরম্যাটে লেখা যায়।
+        </p>
+
+        <h3>PHP Float</h3>
+        <p>
+          A <strong>float</strong> (also called double or floating point number) is a number with a decimal point or in exponential form.
+        </p>
+        <pre>
+&lt;?php
+$a = 3.1416;      // float
+$b = 2.5e3;       // float (2500)
+$c = 7E-10;       // float (0.0000000007)
+
+echo $a; // Outputs: 3.1416
+echo $b; // Outputs: 2500
+echo $c; // Outputs: 7.0E-10
+?&gt;
+        </pre>
+        <p class="bangla">
+          <strong>ফ্লোট</strong> হচ্ছে দশমিক সংখ্যা বা এক্সপোনেনশিয়াল ফরম্যাটে লেখা সংখ্যা। যেমন: 3.14, 2.5e3 ইত্যাদি।
+        </p>
+
+        <h3>PHP Boolean</h3>
+        <p>
+          A <strong>boolean</strong> represents two possible states: <code>true</code> or <code>false</code>. Booleans are often used in conditional testing.
+        </p>
+        <pre>
+&lt;?php
+$is_logged_in = true;
+$is_admin = false;
+
+if ($is_logged_in) {
+    echo "Welcome!";
+} else {
+    echo "Please log in.";
+}
+?&gt;
+        </pre>
+        <p class="bangla">
+          <strong>বুলিয়ান</strong> ডেটা টাইপে শুধু দুইটি মান থাকতে পারে: <code>true</code> (সত্য) অথবা <code>false</code> (মিথ্যা)। সাধারণত শর্ত যাচাই করার জন্য ব্যবহার হয়।
+        </p>
+        <h3>PHP Object</h3>
+        <p>
+          In PHP, an <strong>object</strong> is an instance of a class. Classes are templates that define properties (variables) and methods (functions) that objects created from the class will have.
+        </p>
+        <pre>
+&lt;?php
+class Car {
+    public $model;
+    public $color;
+
+    // Constructor function
+    function __construct($model, $color) {
+        $this-&gt;model = $model;
+        $this-&gt;color = $color;
+    }
+
+    function getMessage() {
+        return "The car is a " . $this-&gt;color . " " . $this-&gt;model . ".";
+    }
+}
+
+$car1 = new Car("Volvo", "red");
+$car2 = new Car("BMW", "black");
+
+echo $car1-&gt;getMessage(); // Outputs: The car is a red Volvo.
+echo "&lt;br&gt;";
+echo $car2-&gt;getMessage(); // Outputs: The car is a black BMW.
+?&gt;
+        </pre>
+        <p class="bangla">
+          <strong>অবজেক্ট</strong> হচ্ছে ক্লাসের একটি নির্দিষ্ট উদাহরণ (instance)। ক্লাসে যেসব প্রপার্টি ও মেথড থাকে, অবজেক্ট সেগুলো পায়। উপরের উদাহরণে <code>Car</code> ক্লাসে <code>$model</code> ও <code>$color</code> প্রপার্টি এবং <code>getMessage()</code> মেথড আছে। <code>__construct()</code> ফাংশনটি অবজেক্ট তৈরি হওয়ার সময় স্বয়ংক্রিয়ভাবে কল হয় এবং প্রপার্টিগুলো সেট করে। প্রতিটি অবজেক্টের মান আলাদা হতে পারে।
+        </p>
+        <h3>PHP NULL Value</h3>
+        <p>
+          The <strong>NULL</strong> data type in PHP can have only one value: <code>NULL</code>. A variable is of type NULL if it has no value assigned to it.
+        </p>
+        <pre>
+&lt;?php
+$var1 = NULL;
+$var2; // No value assigned, so it is NULL by default
+
+echo $var1; // Outputs nothing
+var_dump($var1); // Outputs: NULL
+
+var_dump($var2); // Outputs: NULL
+
+// You can empty a variable by setting it to NULL
+$var3 = "Hello";
+$var3 = NULL;
+var_dump($var3); // Outputs: NULL
+?&gt;
+        </pre>
+        <p class="bangla">
+          <strong>NULL</strong> একটি বিশেষ ডেটা টাইপ, যার একমাত্র মান হচ্ছে <code>NULL</code>। কোনো ভ্যারিয়েবলের কোনো মান না থাকলে সেটি NULL হয়। যদি কোনো ভ্যারিয়েবল ডিক্লেয়ার করে মান না দেওয়া হয়, তাহলে সেটি স্বয়ংক্রিয়ভাবে NULL হয়ে যায়। আবার, কোনো ভ্যারিয়েবলের মান মুছে ফেলতে চাইলে সেটিকে <code>NULL</code> সেট করতে পারেন।
+        </p>
+        <h3>Change Data Type</h3>
+        <p>
+          If you assign an integer value to a variable, the type will automatically be an integer.<br>
+          If you assign a string to the same variable, the type will change to a string:
+        </p>
+        <pre>
+&lt;?php
+$x = 10;           // $x is now an integer
+var_dump($x);      // Outputs: int(10)
+
+$x = "Hello PHP";  // $x is now a string
+var_dump($x);      // Outputs: string(9) "Hello PHP"
+?&gt;
+        </pre>
+        <p class="bangla">
+          যদি কোনো ভ্যারিয়েবলে ইন্টিজার মান অ্যাসাইন করেন, তাহলে সেটি স্বয়ংক্রিয়ভাবে ইন্টিজার টাইপ হয়ে যায়।<br>
+          আবার, একই ভ্যারিয়েবলে স্ট্রিং মান অ্যাসাইন করলে টাইপ পরিবর্তন হয়ে স্ট্রিং হয়ে যাবে।
+        </p>
         </section>
       </main>
     </div>

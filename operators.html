@@ -14,6 +14,7 @@
     <button id="toggleBtn">☰ Menu</button>
     <div class="sidebar">
       <nav>
+        <a href="index.html">Menu</a>
         <a href="index.html">PHP HOME</a>
         <a href="intro.html">PHP Intro</a>
         <a href="install.html">PHP Install</a>
@@ -28,7 +29,7 @@
         <a href="math.html">PHP Math</a>
         <a href="constants.html">PHP Constants</a>
         <a href="magic-constants.html">PHP Magic Constants</a>
-        <a href="operators.html">PHP Operators</a>
+        <a href="operators.html"class="active">PHP Operators</a>
         <a href="if-else.html">PHP If...Else...Elseif</a>
         <a href="switch.html">PHP Switch</a>
         <a href="loops.html">PHP Loops</a>
@@ -42,219 +43,538 @@
       </header>
       <main>
         <section class="section" id="operators">
-          <h2>Arithmetic Operators</h2>
-          <p>
-            Arithmetic operators are used to perform mathematical operations
-            like addition, subtraction, multiplication, etc.
-          </p>
-          <table
-            style="
-              width: 100%;
-              border-collapse: collapse;
-              margin-bottom: 1.2rem;
-            "
-          >
-            <tr style="background: #f0f4fa">
-              <th>Operator</th>
-              <th>Name</th>
-              <th>Example</th>
-            </tr>
-            <tr>
-              <td style="text-align: center">+</td>
-              <td>Addition</td>
-              <td>$a + $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">-</td>
-              <td>Subtraction</td>
-              <td>$a - $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">*</td>
-              <td>Multiplication</td>
-              <td>$a * $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">/</td>
-              <td>Division</td>
-              <td>$a / $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">%</td>
-              <td>Modulus</td>
-              <td>$a % $b</td>
-            </tr>
-          </table>
-          <pre>
+        <!-- INSERT_YOUR_CODE -->
+        <h2>PHP Operators</h2>
+        <p>
+          Operators are used to perform operations on variables and values in PHP.
+        </p>
+        <p class="bangla">
+          PHP-তে অপারেটর ব্যবহার করে ভ্যারিয়েবল ও মানের উপর বিভিন্ন ধরনের অপারেশন করা যায়।
+        </p>
+
+        <h3>Types of Operators in PHP</h3>
+        <ul>
+          <li>
+            <strong>Arithmetic Operators</strong> – Used to perform common arithmetic operations.<br>
+            <span class="bangla">গাণিতিক অপারেশন করার জন্য ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>Assignment Operators</strong> – Used to assign values to variables.<br>
+            <span class="bangla">ভ্যারিয়েবলে মান অ্যাসাইন করতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>Comparison Operators</strong> – Used to compare two values.<br>
+            <span class="bangla">দুইটি মান তুলনা করতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>Increment/Decrement Operators</strong> – Used to increment or decrement a variable's value.<br>
+            <span class="bangla">ভ্যারিয়েবলের মান বাড়াতে বা কমাতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>Logical Operators</strong> – Used to combine conditional statements.<br>
+            <span class="bangla">একাধিক শর্ত একত্রে যাচাই করতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>String Operators</strong> – Used to combine or manipulate strings.<br>
+            <span class="bangla">স্ট্রিং একত্রে যোগ বা পরিবর্তন করতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>Array Operators</strong> – Used to compare arrays.<br>
+            <span class="bangla">দুইটি অ্যারে তুলনা করতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>Conditional Assignment Operators</strong> – Used to set a value depending on conditions.<br>
+            <span class="bangla">শর্ত অনুযায়ী মান নির্ধারণ করতে ব্যবহৃত হয়।</span>
+          </li>
+        </ul>
+
+        <div class="note">
+          <strong>Note:</strong> Each operator group has its own syntax and use cases. The following sections will explain each group in detail with examples.
+          <br>
+          <span class="bangla"><strong>নোট:</strong> প্রতিটি অপারেটরের নিজস্ব ব্যবহার ও সিনট্যাক্স আছে। নিচে প্রতিটি অপারেটর গ্রুপের বিস্তারিত উদাহরণ দেয়া হয়েছে।</span>
+        </div>
+
+        <hr>
+
+        <h3>1. Arithmetic Operators</h3>
+        <p>
+          Arithmetic operators are used to perform common mathematical operations.
+        </p>
+        <p class="bangla">
+          গাণিতিক অপারেটর দিয়ে যোগ, বিয়োগ, গুণ, ভাগ ইত্যাদি করা যায়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td><code>+</code></td>
+            <td>Addition<br><span class="bangla">যোগ</span></td>
+            <td><code>$a + $b</code></td>
+            <td>Sum of $a and $b</td>
+          </tr>
+          <tr>
+            <td><code>-</code></td>
+            <td>Subtraction<br><span class="bangla">বিয়োগ</span></td>
+            <td><code>$a - $b</code></td>
+            <td>Difference of $a and $b</td>
+          </tr>
+          <tr>
+            <td><code>*</code></td>
+            <td>Multiplication<br><span class="bangla">গুণ</span></td>
+            <td><code>$a * $b</code></td>
+            <td>Product of $a and $b</td>
+          </tr>
+          <tr>
+            <td><code>/</code></td>
+            <td>Division<br><span class="bangla">ভাগ</span></td>
+            <td><code>$a / $b</code></td>
+            <td>Quotient of $a and $b</td>
+          </tr>
+          <tr>
+            <td><code>%</code></td>
+            <td>Modulus<br><span class="bangla">ভাগশেষ</span></td>
+            <td><code>$a % $b</code></td>
+            <td>Remainder of $a divided by $b</td>
+          </tr>
+          <tr>
+            <td><code>**</code></td>
+            <td>Exponentiation<br><span class="bangla">ঘাত</span></td>
+            <td><code>$a ** $b</code></td>
+            <td>$a to the power of $b</td>
+          </tr>
+        </table>
+        <pre>
 &lt;?php
 $a = 10;
 $b = 3;
 echo $a + $b; // 13
+echo $a - $b; // 7
+echo $a * $b; // 30
+echo $a / $b; // 3.333...
 echo $a % $b; // 1
-?&gt;</pre
-          >
+echo $a ** $b; // 1000
+?&gt;
+        </pre>
+        <p class="bangla">
+          উপরের কোডে প্রতিটি গাণিতিক অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
 
-          <h2>Assignment Operators</h2>
-          <p>Assignment operators are used to assign values to variables.</p>
-          <table
-            style="
-              width: 100%;
-              border-collapse: collapse;
-              margin-bottom: 1.2rem;
-            "
-          >
-            <tr style="background: #f0f4fa">
-              <th>Operator</th>
-              <th>Name</th>
-              <th>Example</th>
-            </tr>
-            <tr>
-              <td style="text-align: center">=</td>
-              <td>Assign</td>
-              <td>$a = 5</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">+=</td>
-              <td>Add and assign</td>
-              <td>$a += 2</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">-=</td>
-              <td>Subtract and assign</td>
-              <td>$a -= 2</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">*=</td>
-              <td>Multiply and assign</td>
-              <td>$a *= 2</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">/=</td>
-              <td>Divide and assign</td>
-              <td>$a /= 2</td>
-            </tr>
-          </table>
-          <pre>
+        <h3>2. Assignment Operators</h3>
+        <p>
+          Assignment operators are used to assign values to variables.
+        </p>
+        <p class="bangla">
+          অ্যাসাইনমেন্ট অপারেটর দিয়ে ভ্যারিয়েবলে মান সেট করা হয়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Example</th>
+            <th>Same As</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>=</code></td>
+            <td><code>$x = 5</code></td>
+            <td></td>
+            <td>Assigns 5 to $x</td>
+          </tr>
+          <tr>
+            <td><code>+=</code></td>
+            <td><code>$x += 3</code></td>
+            <td><code>$x = $x + 3</code></td>
+            <td>Adds 3 to $x</td>
+          </tr>
+          <tr>
+            <td><code>-=</code></td>
+            <td><code>$x -= 2</code></td>
+            <td><code>$x = $x - 2</code></td>
+            <td>Subtracts 2 from $x</td>
+          </tr>
+          <tr>
+            <td><code>*=</code></td>
+            <td><code>$x *= 4</code></td>
+            <td><code>$x = $x * 4</code></td>
+            <td>Multiplies $x by 4</td>
+          </tr>
+          <tr>
+            <td><code>/=</code></td>
+            <td><code>$x /= 5</code></td>
+            <td><code>$x = $x / 5</code></td>
+            <td>Divides $x by 5</td>
+          </tr>
+          <tr>
+            <td><code>%=</code></td>
+            <td><code>$x %= 3</code></td>
+            <td><code>$x = $x % 3</code></td>
+            <td>Assigns remainder of $x divided by 3</td>
+          </tr>
+        </table>
+        <pre>
+&lt;?php
+$x = 10;
+$x += 5; // $x = 15
+$x -= 3; // $x = 12
+$x *= 2; // $x = 24
+$x /= 4; // $x = 6
+$x %= 4; // $x = 2
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে প্রতিটি অ্যাসাইনমেন্ট অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
+
+        <h3>3. Comparison Operators</h3>
+        <p>
+          Comparison operators are used to compare two values.
+        </p>
+        <p class="bangla">
+          তুলনা করার জন্য কম্পারিজন অপারেটর ব্যবহার করা হয়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td><code>==</code></td>
+            <td>Equal</td>
+            <td><code>$a == $b</code></td>
+            <td>True if $a is equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>===</code></td>
+            <td>Identical</td>
+            <td><code>$a === $b</code></td>
+            <td>True if $a is equal to $b and of same type</td>
+          </tr>
+          <tr>
+            <td><code>!=</code></td>
+            <td>Not equal</td>
+            <td><code>$a != $b</code></td>
+            <td>True if $a is not equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>&lt;&gt;</code></td>
+            <td>Not equal</td>
+            <td><code>$a &lt;&gt; $b</code></td>
+            <td>True if $a is not equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>!==</code></td>
+            <td>Not identical</td>
+            <td><code>$a !== $b</code></td>
+            <td>True if $a is not equal or not same type as $b</td>
+          </tr>
+          <tr>
+            <td><code>&gt;</code></td>
+            <td>Greater than</td>
+            <td><code>$a &gt; $b</code></td>
+            <td>True if $a is greater than $b</td>
+          </tr>
+          <tr>
+            <td><code>&lt;</code></td>
+            <td>Less than</td>
+            <td><code>$a &lt; $b</code></td>
+            <td>True if $a is less than $b</td>
+          </tr>
+          <tr>
+            <td><code>&gt;=</code></td>
+            <td>Greater than or equal to</td>
+            <td><code>$a &gt;= $b</code></td>
+            <td>True if $a is greater than or equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>&lt;=</code></td>
+            <td>Less than or equal to</td>
+            <td><code>$a &lt;= $b</code></td>
+            <td>True if $a is less than or equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>&lt;=&gt;</code></td>
+            <td>Spaceship (PHP 7+)</td>
+            <td><code>$a &lt;=&gt; $b</code></td>
+            <td>-1, 0, or 1</td>
+          </tr>
+        </table>
+        <pre>
 &lt;?php
 $a = 5;
-$a += 3; // $a is now 8
-?&gt;</pre
-          >
+$b = "5";
+$c = 10;
 
-          <h2>Comparison Operators</h2>
-          <p>
-            Comparison operators are used to compare two values and return true
-            or false.
-          </p>
-          <table
-            style="
-              width: 100%;
-              border-collapse: collapse;
-              margin-bottom: 1.2rem;
-            "
-          >
-            <tr style="background: #f0f4fa">
-              <th>Operator</th>
-              <th>Name</th>
-              <th>Example</th>
-            </tr>
-            <tr>
-              <td style="text-align: center">==</td>
-              <td>Equal</td>
-              <td>$a == $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">!=</td>
-              <td>Not equal</td>
-              <td>$a != $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">&lt;</td>
-              <td>Less than</td>
-              <td>$a &lt; $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">&gt;</td>
-              <td>Greater than</td>
-              <td>$a &gt; $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">&lt;=</td>
-              <td>Less than or equal</td>
-              <td>$a &lt;= $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">&gt;=</td>
-              <td>Greater than or equal</td>
-              <td>$a &gt;= $b</td>
-            </tr>
-          </table>
-          <pre>
+var_dump($a == $b);   // true (value equal)
+var_dump($a === $b);  // false (type not equal)
+var_dump($a != $c);   // true
+var_dump($a &lt; $c);    // true
+var_dump($a &gt;= $b);   // true
+var_dump($a &lt;=&gt; $c); // -1 ($a &lt; $c)
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে বিভিন্ন কম্পারিজন অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
+
+        <h3>4. Increment/Decrement Operators</h3>
+        <p>
+          These operators are used to increment or decrement a variable's value.
+        </p>
+        <p class="bangla">
+          ভ্যারিয়েবলের মান এক বাড়াতে বা কমাতে ইনক্রিমেন্ট/ডিক্রিমেন্ট অপারেটর ব্যবহার হয়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>++$x</code></td>
+            <td>Pre-increment</td>
+            <td><code>++$x</code></td>
+            <td>Increments $x by one, then returns $x</td>
+          </tr>
+          <tr>
+            <td><code>$x++</code></td>
+            <td>Post-increment</td>
+            <td><code>$x++</code></td>
+            <td>Returns $x, then increments $x by one</td>
+          </tr>
+          <tr>
+            <td><code>--$x</code></td>
+            <td>Pre-decrement</td>
+            <td><code>--$x</code></td>
+            <td>Decrements $x by one, then returns $x</td>
+          </tr>
+          <tr>
+            <td><code>$x--</code></td>
+            <td>Post-decrement</td>
+            <td><code>$x--</code></td>
+            <td>Returns $x, then decrements $x by one</td>
+          </tr>
+        </table>
+        <pre>
 &lt;?php
-$a = 5;
-$b = 8;
-if ($a < $b) {
-    echo "a is less than b";
-}
-?&gt;</pre
-          >
+$x = 5;
+echo ++$x; // 6 (আগে বাড়ায়, পরে দেখায়)
+echo $x++; // 6 (আগে দেখায়, পরে বাড়ায়)
+echo --$x; // 6 (আগে কমায়, পরে দেখায়)
+echo $x--; // 6 (আগে দেখায়, পরে কমায়)
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে ইনক্রিমেন্ট ও ডিক্রিমেন্ট অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
 
-          <h2>Logical Operators</h2>
-          <p>Logical operators are used to combine conditional statements.</p>
-          <table
-            style="
-              width: 100%;
-              border-collapse: collapse;
-              margin-bottom: 1.2rem;
-            "
-          >
-            <tr style="background: #f0f4fa">
-              <th>Operator</th>
-              <th>Name</th>
-              <th>Example</th>
-            </tr>
-            <tr>
-              <td style="text-align: center">&&</td>
-              <td>And</td>
-              <td>$a && $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">||</td>
-              <td>Or</td>
-              <td>$a || $b</td>
-            </tr>
-            <tr>
-              <td style="text-align: center">!</td>
-              <td>Not</td>
-              <td>!$a</td>
-            </tr>
-          </table>
-          <pre>
+        <h3>5. Logical Operators</h3>
+        <p>
+          Logical operators are used to combine conditional statements.
+        </p>
+        <p class="bangla">
+          একাধিক শর্ত একত্রে যাচাই করতে লজিক্যাল অপারেটর ব্যবহার হয়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td><code>and</code> / <code>&&</code></td>
+            <td>And</td>
+            <td><code>$a and $b</code></td>
+            <td>True if both $a and $b are true</td>
+          </tr>
+          <tr>
+            <td><code>or</code> / <code>||</code></td>
+            <td>Or</td>
+            <td><code>$a or $b</code></td>
+            <td>True if either $a or $b is true</td>
+          </tr>
+          <tr>
+            <td><code>xor</code></td>
+            <td>Xor</td>
+            <td><code>$a xor $b</code></td>
+            <td>True if either $a or $b is true, but not both</td>
+          </tr>
+          <tr>
+            <td><code>!</code></td>
+            <td>Not</td>
+            <td><code>!$a</code></td>
+            <td>True if $a is not true</td>
+          </tr>
+        </table>
+        <pre>
 &lt;?php
 $a = true;
 $b = false;
-if ($a && !$b) {
-    echo "a is true and b is false";
-}
-?&gt;</pre
-          >
 
-          <div
-            class="note"
-            style="
-              background: #fef9c3;
-              border-left: 5px solid #facc15;
-              color: #7c5700;
-              padding: 1rem 1.2rem;
-              border-radius: 7px;
-              margin-bottom: 1.3rem;
-              font-size: 1.07rem;
-            "
-          >
-            <strong>Note:</strong> Operators are essential in PHP for performing
-            calculations, making comparisons, and controlling logic. Mastering
-            operators is key to writing effective PHP code.
-          </div>
+var_dump($a && $b); // false
+var_dump($a || $b); // true
+var_dump($a xor $b); // true
+var_dump(!$a); // false
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে লজিক্যাল অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
+
+        <h3>6. String Operators</h3>
+        <p>
+          String operators are used to combine or manipulate strings.
+        </p>
+        <p class="bangla">
+          স্ট্রিং অপারেটর দিয়ে স্ট্রিং একত্রে যোগ বা পরিবর্তন করা যায়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>.</code></td>
+            <td>Concatenation</td>
+            <td><code>$a . $b</code></td>
+            <td>Concatenates $a and $b</td>
+          </tr>
+          <tr>
+            <td><code>.=</code></td>
+            <td>Concatenation assignment</td>
+            <td><code>$a .= $b</code></td>
+            <td>Appends $b to $a</td>
+          </tr>
+        </table>
+        <pre>
+&lt;?php
+$a = "Hello";
+$b = " World!";
+echo $a . $b; // Hello World!
+
+$a .= $b;
+echo $a; // Hello World!
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে স্ট্রিং অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
+
+        <h3>7. Array Operators</h3>
+        <p>
+          Array operators are used to compare arrays.
+        </p>
+        <p class="bangla">
+          অ্যারে অপারেটর দিয়ে দুইটি অ্যারে তুলনা করা যায়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>+</code></td>
+            <td>Union</td>
+            <td><code>$a + $b</code></td>
+            <td>Union of $a and $b</td>
+          </tr>
+          <tr>
+            <td><code>==</code></td>
+            <td>Equality</td>
+            <td><code>$a == $b</code></td>
+            <td>True if $a and $b have same key/value pairs</td>
+          </tr>
+          <tr>
+            <td><code>===</code></td>
+            <td>Identity</td>
+            <td><code>$a === $b</code></td>
+            <td>True if $a and $b have same key/value pairs in same order and type</td>
+          </tr>
+          <tr>
+            <td><code>!=</code></td>
+            <td>Inequality</td>
+            <td><code>$a != $b</code></td>
+            <td>True if $a is not equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>&lt;&gt;</code></td>
+            <td>Inequality</td>
+            <td><code>$a &lt;&gt; $b</code></td>
+            <td>True if $a is not equal to $b</td>
+          </tr>
+          <tr>
+            <td><code>!==</code></td>
+            <td>Non-identity</td>
+            <td><code>$a !== $b</code></td>
+            <td>True if $a is not identical to $b</td>
+          </tr>
+        </table>
+        <pre>
+&lt;?php
+$a = array("a" => "red", "b" => "green");
+$b = array("c" => "blue", "d" => "yellow");
+$c = $a + $b; // Union of $a and $b
+var_dump($c);
+
+$d = array("a" => "red", "b" => "green");
+var_dump($a == $d);  // true
+var_dump($a === $d); // true
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে অ্যারে অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
+
+        <h3>8. Conditional Assignment Operators</h3>
+        <p>
+          Conditional assignment operators are used to set a value depending on conditions.
+        </p>
+        <p class="bangla">
+          শর্ত অনুযায়ী মান নির্ধারণ করতে কন্ডিশনাল অ্যাসাইনমেন্ট অপারেটর ব্যবহার হয়।
+        </p>
+        <table>
+          <tr>
+            <th>Operator</th>
+            <th>Name</th>
+            <th>Example</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>?:</code></td>
+            <td>Ternary</td>
+            <td><code>$x = ($a &gt; $b) ? $a : $b;</code></td>
+            <td>If $a &gt; $b, $x = $a, else $x = $b</td>
+          </tr>
+          <tr>
+            <td><code>??</code></td>
+            <td>Null coalescing (PHP 7+)</td>
+            <td><code>$x = $a ?? $b;</code></td>
+            <td>If $a exists and not null, $x = $a, else $x = $b</td>
+          </tr>
+        </table>
+        <pre>
+&lt;?php
+$a = null;
+$b = 10;
+$x = ($a !== null) ? $a : $b; // $x = 10
+
+// PHP 7+ null coalescing
+$y = $a ?? $b; // $y = 10
+?&gt;
+        </pre>
+        <p class="bangla">
+          এখানে কন্ডিশনাল অ্যাসাইনমেন্ট অপারেটরের ব্যবহার দেখানো হয়েছে।
+        </p>
         </section>
       </main>
     </div>

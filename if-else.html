@@ -29,7 +29,7 @@
         <a href="constants.html">PHP Constants</a>
         <a href="magic-constants.html">PHP Magic Constants</a>
         <a href="operators.html">PHP Operators</a>
-        <a href="if-else.html">PHP If...Else...Elseif</a>
+        <a href="if-else.html"class="active">PHP If...Else...Elseif</a>
         <a href="switch.html">PHP Switch</a>
         <a href="loops.html">PHP Loops</a>
         <a href="functions.html">PHP Functions</a>
@@ -42,40 +42,124 @@
       </header>
       <main>
         <section class="section" id="if-else">
-          <h2>PHP If...Else...Elseif</h2>
-          <p>
-            Conditional statements are used to perform actions based on
-            conditions. Use <code>if</code>, <code>else</code>, and
-            <code>elseif</code> to control the flow.
-          </p>
-          <pre>
+        <!-- INSERT_YOUR_CODE -->
+        <h2>PHP Conditional Statements</h2>
+        <p>
+          Very often when you write code, you want to perform different actions for different conditions. You can use conditional statements in your code to do this.
+        </p>
+        <p class="bangla">
+          প্রায়ই কোড লেখার সময়, বিভিন্ন শর্ত অনুযায়ী বিভিন্ন কাজ করতে হয়। PHP-তে কন্ডিশনাল স্টেটমেন্ট ব্যবহার করে আপনি এটি করতে পারেন।
+        </p>
+
+        <h3>Types of Conditional Statements in PHP</h3>
+        <ul>
+          <li>
+            <strong>if statement</strong> – executes some code if one condition is true<br>
+            <span class="bangla">একটি শর্ত সত্য হলে কিছু কোড চালায়।</span>
+          </li>
+          <li>
+            <strong>if...else statement</strong> – executes some code if a condition is true and another code if that condition is false<br>
+            <span class="bangla">শর্ত সত্য হলে একটি কোড, মিথ্যা হলে অন্য কোড চালায়।</span>
+          </li>
+          <li>
+            <strong>if...elseif...else statement</strong> – executes different codes for more than two conditions<br>
+            <span class="bangla">দুইয়ের বেশি শর্তের জন্য আলাদা কোড চালাতে ব্যবহৃত হয়।</span>
+          </li>
+          <li>
+            <strong>switch statement</strong> – selects one of many blocks of code to be executed<br>
+            <span class="bangla">একাধিক কোড ব্লকের মধ্যে একটি নির্বাচন করে চালায়।</span>
+          </li>
+        </ul>
+
+        <h3>PHP if Statement</h3>
+        <p>
+          The <code>if</code> statement executes some code if a condition is true.
+        </p>
+        <pre>
 &lt;?php
-    $x = 10;
-    if ($x > 5) {
-        echo "x is greater than 5";
-    } elseif ($x == 5) {
-        echo "x is 5";
-    } else {
-        echo "x is less than 5";
-    }
-?&gt;</pre
-          >
-          <p class="bangla">
-            শর্ত অনুযায়ী কাজ করতে <code>if</code>, <code>else</code>,
-            <code>elseif</code> ব্যবহার করা হয়।
-          </p>
-          <pre class="bangla">
+$t = 20;
+if ($t &lt; 30) {
+    echo "Have a nice day!";
+}
+?&gt;
+        </pre>
+        <p class="bangla">
+          <code>if</code> স্টেটমেন্ট একটি শর্ত সত্য হলে কোড চালায়।<br>
+          উপরের উদাহরণে, <code>$t</code> যদি ৩০-এর কম হয়, তাহলে "Have a nice day!" প্রিন্ট হবে।
+        </p>
+
+        <h3>PHP if...else Statement</h3>
+        <p>
+          The <code>if...else</code> statement executes one block of code if a condition is true, and another block if it is false.
+        </p>
+        <pre>
 &lt;?php
-    $x = ১০;
-    if ($x > ৫) {
-        echo "x ৫ এর চেয়ে বড়";
-    } elseif ($x == ৫) {
-        echo "x ৫";
-    } else {
-        echo "x ৫ এর চেয়ে ছোট";
-    }
-?&gt;</pre
-          >
+$age = 18;
+if ($age &gt;= 18) {
+    echo "You are an adult.";
+} else {
+    echo "You are a minor.";
+}
+?&gt;
+        </pre>
+        <p class="bangla">
+          <code>if...else</code> স্টেটমেন্টে, শর্ত সত্য হলে একটি কোড, মিথ্যা হলে অন্য কোড চালায়।<br>
+          এখানে, <code>$age</code> ১৮ বা তার বেশি হলে "You are an adult." দেখাবে, না হলে "You are a minor."।
+        </p>
+
+        <h3>PHP if...elseif...else Statement</h3>
+        <p>
+          The <code>if...elseif...else</code> statement allows you to test several conditions.
+        </p>
+        <pre>
+&lt;?php
+$score = 75;
+if ($score &gt;= 90) {
+    echo "Grade: A";
+} elseif ($score &gt;= 80) {
+    echo "Grade: B";
+} elseif ($score &gt;= 70) {
+    echo "Grade: C";
+} else {
+    echo "Grade: F";
+}
+?&gt;
+        </pre>
+        <p class="bangla">
+          <code>if...elseif...else</code> দিয়ে একাধিক শর্ত পরীক্ষা করা যায়।<br>
+          এখানে, <code>$score</code> অনুযায়ী গ্রেড নির্ধারণ করা হয়েছে।
+        </p>
+
+        <h3>PHP Shorthand if Statements (Ternary Operator)</h3>
+        <p>
+          PHP provides a shorthand way to write simple <code>if...else</code> statements using the <strong>ternary operator</strong> <code>?:</code>.
+        </p>
+        <pre>
+&lt;?php
+$age = 16;
+$message = ($age &gt;= 18) ? "You are an adult." : "You are a minor.";
+echo $message; // Outputs: You are a minor.
+?&gt;
+        </pre>
+        <p class="bangla">
+          PHP-তে <code>if...else</code> স্টেটমেন্ট সংক্ষেপে লেখার জন্য <strong>ternary operator</strong> <code>?:</code> ব্যবহার করা হয়।<br>
+          উপরের উদাহরণে, <code>$age</code> ১৮ বা তার বেশি হলে <code>$message</code> হবে "You are an adult.", না হলে "You are a minor."।
+        </p>
+
+        <h4>Short Ternary (Null Coalescing) Operator</h4>
+        <p>
+          PHP 7.0+ introduces the <strong>null coalescing operator</strong> <code>??</code> to provide a default value if a variable is not set or is <code>NULL</code>.
+        </p>
+        <pre>
+&lt;?php
+$username = $_GET['user'] ?? "Guest";
+echo $username;
+?&gt;
+        </pre>
+        <p class="bangla">
+          PHP 7.0 থেকে <code>??</code> (null coalescing operator) ব্যবহার করে সহজেই ডিফল্ট মান সেট করা যায়।<br>
+          যেমন, <code>$_GET['user']</code> সেট না থাকলে <code>$username</code> হবে "Guest"।
+        </p>
         </section>
       </main>
     </div>

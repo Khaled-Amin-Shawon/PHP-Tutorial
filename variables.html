@@ -129,6 +129,124 @@ echo $z; // Outputs: 15
           <p class="bangla">
             PHP একটি <strong>loosely typed</strong> ভাষা, অর্থাৎ ভ্যারিয়েবল ডিক্লেয়ার করার সময় ডেটা টাইপ আলাদাভাবে জানাতে হয় না। PHP নিজে থেকেই ভ্যালু দেখে টাইপ নির্ধারণ করে। তাই আপনি চাইলে স্ট্রিং ও নাম্বার একসাথে যোগ করতে পারেন, PHP স্বয়ংক্রিয়ভাবে কনভার্ট করে নেয়।
           </p>
+        <h3>Assign String to a Variable</h3>
+        <p>
+          To assign a string value to a variable in PHP, use the <code>=</code> operator and wrap the string in quotes.
+        </p>
+        <pre>
+&lt;?php
+$message = "Welcome to PHP!";
+echo $message; // Outputs: Welcome to PHP!
+?&gt;
+        </pre>
+
+        <h3>Assign Multiple Values to Variables</h3>
+        <p>
+          You can assign multiple values to multiple variables in one line using the <code>list()</code> function or by separate assignments.
+        </p>
+        <pre>
+&lt;?php
+// Assigning multiple values using list()
+list($a, $b, $c) = array("Apple", "Banana", "Cherry");
+echo $a; // Outputs: Apple
+echo $b; // Outputs: Banana
+echo $c; // Outputs: Cherry
+
+// Or assign separately
+$x = "Red";
+$y = "Green";
+$z = "Blue";
+?&gt;
+        </pre>
+        <h3>PHP Variable Scope</h3>
+        <p>
+          In PHP, the <strong>scope</strong> of a variable determines where it can be accessed in your script. There are three main types of variable scope:
+        </p>
+        <ul>
+          <li><strong>Local</strong> - Variables declared inside a function and accessible only within that function.</li>
+          <li><strong>Global</strong> - Variables declared outside any function and accessible everywhere except inside functions (unless specified).</li>
+          <li><strong>Static</strong> - Variables within a function that retain their value between function calls.</li>
+        </ul>
+
+        <h4>Local Scope</h4>
+        <p>
+          A variable declared inside a function has a <strong>local scope</strong> and can only be accessed within that function.
+        </p>
+        <pre>
+&lt;?php
+function myTest() {
+    $x = 5; // local scope
+    echo $x; // Outputs: 5
+}
+myTest();
+// echo $x; // Error: $x is not accessible outside the function
+?&gt;
+        </pre>
+
+        <h4>Global Scope</h4>
+        <p>
+          A variable declared outside a function has a <strong>global scope</strong> and can be accessed anywhere outside functions. To use a global variable inside a function, use the <code>global</code> keyword.
+        </p>
+        <pre>
+&lt;?php
+$x = 10; // global scope
+
+function myTest() {
+    global $x;
+    echo $x; // Outputs: 10
+}
+myTest();
+?&gt;
+        </pre>
+
+        <h4>Static Scope</h4>
+        <p>
+          Normally, when a function is completed, all its variables are deleted. But if you declare a variable as <code>static</code>, it will retain its value between function calls.
+        </p>
+        <pre>
+&lt;?php
+function myCounter() {
+    static $count = 0;
+    $count++;
+    echo $count . " ";
+}
+myCounter(); // Outputs: 1
+myCounter(); // Outputs: 2
+myCounter(); // Outputs: 3
+?&gt;
+        </pre>
+
+        <p class="bangla">
+          PHP-তে ভ্যারিয়েবলের <strong>স্কোপ</strong> নির্ধারণ করে কোথায় সেই ভ্যারিয়েবলটি ব্যবহার করা যাবে। তিন ধরনের স্কোপ আছে: <strong>local</strong> (ফাংশনের ভিতরে), <strong>global</strong> (ফাংশনের বাইরে), এবং <strong>static</strong> (ফাংশনের ভিতরে, কিন্তু মান ধরে রাখে)।
+        </p>
+        <pre class="bangla">
+&lt;?php
+// লোকাল স্কোপ
+function myTest() {
+    $x = ৫;
+    echo $x; // আউটপুট: ৫
+}
+myTest();
+
+// গ্লোবাল স্কোপ
+$x = ১০;
+function myTest2() {
+    global $x;
+    echo $x; // আউটপুট: ১০
+}
+myTest2();
+
+// স্ট্যাটিক স্কোপ
+function myCounter() {
+    static $count = ০;
+    $count++;
+    echo $count . " ";
+}
+myCounter(); // আউটপুট: ১
+myCounter(); // আউটপুট: ২
+myCounter(); // আউটপুট: ৩
+?&gt;
+        </pre>
         </section>
       </div>
     </main>
