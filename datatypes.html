@@ -21,7 +21,7 @@
         <a href="comments.html">PHP Comments</a>
         <a href="variables.html">PHP Variables</a>
         <a href="echo-print.html">PHP Echo / Print</a>
-        <a href="datatypes.html">PHP Data Types</a>
+        <a href="datatypes.html" class="active">PHP Data Types</a>
         <a href="strings.html">PHP Strings</a>
         <a href="numbers.html">PHP Numbers</a>
         <a href="casting.html">PHP Casting</a>
@@ -42,123 +42,100 @@
       </header>
       <main>
         <section class="section" id="datatypes">
-          <h3>PHP Variable Types</h3>
-          <p>PHP supports several different data types for variables:</p>
-          <ul>
-            <li>
-              <strong>String</strong> – a sequence of characters, e.g.
-              <code>"Hello"</code>
-            </li>
-            <li>
-              <strong>Integer</strong> – whole numbers, e.g. <code>42</code>
-            </li>
-            <li>
-              <strong>Float</strong> (or double) – numbers with decimals, e.g.
-              <code>3.14</code>
-            </li>
-            <li>
-              <strong>Boolean</strong> – <code>true</code> or <code>false</code>
-            </li>
-            <li>
-              <strong>Array</strong> – a collection of values, e.g.
-              <code>array(1, 2, 3)</code>
-            </li>
-            <li><strong>Object</strong> – an instance of a class</li>
-            <li><strong>NULL</strong> – a variable with no value</li>
-            <li>
-              <strong>Resource</strong> – a special variable holding a reference
-              to an external resource (like a database connection)
-            </li>
-          </ul>
-          <pre>
-&lt;?php
-// String
-$name = "Alice";
-
-// Integer
-$age = 30;
-
-// Float
-$price = 19.99;
-
-// Boolean
-$is_admin = true;
-
-// Array
-$colors = array("red", "green", "blue");
-
-// Object
-class Car {
-    public $model;
-    function __construct($model) {
-        $this->model = $model;
-    }
-}
-$myCar = new Car("Toyota");
-
-// NULL
-$nothing = NULL;
-?&gt;
-        </pre
-          >
-          <h3>Get the Type of a Variable</h3>
+          <h2>PHP Data Types</h2>
+          <!-- INSERT_YOUR_CODE -->
           <p>
-            You can use the <code>gettype()</code> function in PHP to find out
-            the type of a variable.
+            PHP is a loosely typed language, which means you don't need to
+            declare the data type of a variable. PHP automatically converts the
+            variable to the correct data type based on its value. However,
+            understanding data types is crucial for writing efficient and
+            bug-free code.
+          </p>
+
+          <h3>1. Scalar Data Types</h3>
+          <p>Scalar data types can hold only one value at a time:</p>
+
+          <h4>1.1 String</h4>
+          <p>
+            A <strong>string</strong> is a sequence of characters enclosed in
+            quotes. Strings can be created using single quotes, double quotes,
+            or heredoc syntax.
           </p>
           <pre>
 &lt;?php
-$var = "Hello, World!";
-echo gettype($var); // Outputs: string
+// Single quotes
+$name = 'John Doe';
+
+// Double quotes (allows variable interpolation)
+$greeting = "Hello, $name!";
+
+// Heredoc syntax
+$long_text = &lt;&lt;&lt;EOT
+This is a multi-line string
+using heredoc syntax.
+EOT;
+
+echo $name . "&lt;br&gt;";
+echo $greeting . "&lt;br&gt;";
+echo $long_text;
 ?&gt;
-        </pre
-          >
-          <h3>PHP Integer</h3>
+          </pre>
+
+          <h4>1.2 Integer</h4>
           <p>
             An <strong>integer</strong> is a whole number (positive, negative,
-            or zero) without decimals. In PHP, integers can be specified in
-            decimal, hexadecimal, or octal notation.
+            or zero) without decimals. PHP supports different number systems.
           </p>
           <pre>
 &lt;?php
-$x = 42;         // decimal number
-$y = 0x2A;       // hexadecimal number (42 in decimal)
-$z = 052;        // octal number (42 in decimal)
+// Decimal numbers
+$x = 42;
+$y = -17;
+$z = 0;
 
-echo $x; // Outputs: 42
-echo $y; // Outputs: 42
-echo $z; // Outputs: 42
+// Hexadecimal numbers (prefixed with 0x)
+$hex = 0x2A;  // 42 in decimal
+
+// Octal numbers (prefixed with 0)
+$octal = 052; // 42 in decimal
+
+// Binary numbers (prefixed with 0b)
+$binary = 0b101010; // 42 in decimal
+
+echo "Decimal: $x&lt;br&gt;";
+echo "Hexadecimal: $hex&lt;br&gt;";
+echo "Octal: $octal&lt;br&gt;";
+echo "Binary: $binary&lt;br&gt;";
 ?&gt;
-        </pre
-          >
-          <p class="bangla">
-            <strong>ইন্টিজার</strong> হচ্ছে সম্পূর্ণ সংখ্যা (দশমিক ছাড়া)।
-            PHP-তে ইন্টিজার দশমিক, হেক্সাডেসিমাল বা অক্টাল ফরম্যাটে লেখা যায়।
-          </p>
+          </pre>
 
-          <h3>PHP Float</h3>
+          <h4>1.3 Float (Double)</h4>
           <p>
-            A <strong>float</strong> (also called double or floating point
-            number) is a number with a decimal point or in exponential form.
+            A <strong>float</strong> is a number with a decimal point or in
+            exponential form. PHP uses double-precision floating-point format.
           </p>
           <pre>
 &lt;?php
-$a = 3.1416;      // float
-$b = 2.5e3;       // float (2500)
-$c = 7E-10;       // float (0.0000000007)
+// Decimal notation
+$price = 19.99;
+$pi = 3.14159;
 
-echo $a; // Outputs: 3.1416
-echo $b; // Outputs: 2500
-echo $c; // Outputs: 7.0E-10
+// Exponential notation
+$large = 2.5e3;    // 2500
+$small = 7E-10;    // 0.0000000007
+
+// Scientific notation
+$scientific = 1.23e-4; // 0.000123
+
+echo "Price: $price&lt;br&gt;";
+echo "Pi: $pi&lt;br&gt;";
+echo "Large number: $large&lt;br&gt;";
+echo "Small number: $small&lt;br&gt;";
+echo "Scientific: $scientific&lt;br&gt;";
 ?&gt;
-        </pre
-          >
-          <p class="bangla">
-            <strong>ফ্লোট</strong> হচ্ছে দশমিক সংখ্যা বা এক্সপোনেনশিয়াল
-            ফরম্যাটে লেখা সংখ্যা। যেমন: 3.14, 2.5e3 ইত্যাদি।
-          </p>
+          </pre>
 
-          <h3>PHP Boolean</h3>
+          <h4>1.4 Boolean</h4>
           <p>
             A <strong>boolean</strong> represents two possible states:
             <code>true</code> or <code>false</code>. Booleans are often used in
@@ -168,114 +145,346 @@ echo $c; // Outputs: 7.0E-10
 &lt;?php
 $is_logged_in = true;
 $is_admin = false;
+$has_permission = true;
 
+// Boolean in conditional statements
 if ($is_logged_in) {
-    echo "Welcome!";
-} else {
-    echo "Please log in.";
+    echo "Welcome back!&lt;br&gt;";
 }
+
+if ($is_admin) {
+    echo "Admin privileges granted.&lt;br&gt;";
+} else {
+    echo "Regular user access.&lt;br&gt;";
+}
+
+// Boolean operations
+$result = $is_logged_in && $has_permission;
+echo "Can access: " . ($result ? "Yes" : "No");
 ?&gt;
-        </pre
-          >
-          <p class="bangla">
-            <strong>বুলিয়ান</strong> ডেটা টাইপে শুধু দুইটি মান থাকতে পারে:
-            <code>true</code> (সত্য) অথবা <code>false</code> (মিথ্যা)। সাধারণত
-            শর্ত যাচাই করার জন্য ব্যবহার হয়।
-          </p>
-          <h3>PHP Object</h3>
+          </pre>
+
+          <h3>2. Compound Data Types</h3>
+          <p>Compound data types can hold multiple values:</p>
+
+          <h4>2.1 Array</h4>
           <p>
-            In PHP, an <strong>object</strong> is an instance of a class.
-            Classes are templates that define properties (variables) and methods
-            (functions) that objects created from the class will have.
+            An <strong>array</strong> is a collection of values stored under a
+            single variable name. PHP supports indexed arrays, associative
+            arrays, and multidimensional arrays.
+          </p>
+          <pre>
+&lt;?php
+// Indexed array
+$fruits = array("apple", "banana", "orange");
+$colors = ["red", "green", "blue"]; // Short syntax
+
+// Associative array
+$person = array(
+    "name" => "John",
+    "age" => 30,
+    "city" => "New York"
+);
+
+// Multidimensional array
+$students = array(
+    array("name" => "Alice", "grade" => 85),
+    array("name" => "Bob", "grade" => 92),
+    array("name" => "Charlie", "grade" => 78)
+);
+
+echo "First fruit: " . $fruits[0] . "&lt;br&gt;";
+echo "Person's name: " . $person["name"] . "&lt;br&gt;";
+echo "Alice's grade: " . $students[0]["grade"] . "&lt;br&gt;";
+?&gt;
+          </pre>
+
+          <h4>2.2 Object</h4>
+          <p>
+            An <strong>object</strong> is an instance of a class. Objects
+            contain properties (variables) and methods (functions).
           </p>
           <pre>
 &lt;?php
 class Car {
+    // Properties
+    public $brand;
     public $model;
-    public $color;
-
-    // Constructor function
-    function __construct($model, $color) {
+    public $year;
+    
+    // Constructor
+    public function __construct($brand, $model, $year) {
+        $this-&gt;brand = $brand;
         $this-&gt;model = $model;
-        $this-&gt;color = $color;
+        $this-&gt;year = $year;
     }
-
-    function getMessage() {
-        return "The car is a " . $this-&gt;color . " " . $this-&gt;model . ".";
+    
+    // Method
+    public function getInfo() {
+        return "This is a {$this-&gt;year} {$this-&gt;brand} {$this-&gt;model}.";
+    }
+    
+    public function isOld() {
+        return (date("Y") - $this-&gt;year) > 10;
     }
 }
 
-$car1 = new Car("Volvo", "red");
-$car2 = new Car("BMW", "black");
+// Creating objects
+$car1 = new Car("Toyota", "Camry", 2020);
+$car2 = new Car("Honda", "Civic", 2010);
 
-echo $car1-&gt;getMessage(); // Outputs: The car is a red Volvo.
-echo "&lt;br&gt;";
-echo $car2-&gt;getMessage(); // Outputs: The car is a black BMW.
+echo $car1-&gt;getInfo() . "&lt;br&gt;";
+echo $car2-&gt;getInfo() . "&lt;br&gt;";
+echo "Is car2 old? " . ($car2-&gt;isOld() ? "Yes" : "No");
 ?&gt;
-        </pre
-          >
-          <p class="bangla">
-            <strong>অবজেক্ট</strong> হচ্ছে ক্লাসের একটি নির্দিষ্ট উদাহরণ
-            (instance)। ক্লাসে যেসব প্রপার্টি ও মেথড থাকে, অবজেক্ট সেগুলো পায়।
-            উপরের উদাহরণে <code>Car</code> ক্লাসে <code>$model</code> ও
-            <code>$color</code> প্রপার্টি এবং <code>getMessage()</code> মেথড
-            আছে। <code>__construct()</code> ফাংশনটি অবজেক্ট তৈরি হওয়ার সময়
-            স্বয়ংক্রিয়ভাবে কল হয় এবং প্রপার্টিগুলো সেট করে। প্রতিটি অবজেক্টের
-            মান আলাদা হতে পারে।
-          </p>
-          <h3>PHP NULL Value</h3>
+          </pre>
+
+          <h3>3. Special Data Types</h3>
+
+          <h4>3.1 NULL</h4>
           <p>
-            The <strong>NULL</strong> data type in PHP can have only one value:
-            <code>NULL</code>. A variable is of type NULL if it has no value
-            assigned to it.
+            <strong>NULL</strong> is a special data type that represents a
+            variable with no value or an unset variable.
           </p>
           <pre>
 &lt;?php
+// Explicitly setting to NULL
 $var1 = NULL;
-$var2; // No value assigned, so it is NULL by default
 
-echo $var1; // Outputs nothing
-var_dump($var1); // Outputs: NULL
+// Variable declared but not assigned
+$var2;
 
-var_dump($var2); // Outputs: NULL
-
-// You can empty a variable by setting it to NULL
+// Unsetting a variable
 $var3 = "Hello";
-$var3 = NULL;
-var_dump($var3); // Outputs: NULL
+unset($var3);
+
+// Checking for NULL
+if (is_null($var1)) {
+    echo "var1 is NULL&lt;br&gt;";
+}
+
+if (!isset($var2)) {
+    echo "var2 is not set&lt;br&gt;";
+}
+
+// Using null coalescing operator
+$name = $var1 ?? "Default Name";
+echo "Name: $name&lt;br&gt;";
 ?&gt;
-        </pre
-          >
-          <p class="bangla">
-            <strong>NULL</strong> একটি বিশেষ ডেটা টাইপ, যার একমাত্র মান হচ্ছে
-            <code>NULL</code>। কোনো ভ্যারিয়েবলের কোনো মান না থাকলে সেটি NULL
-            হয়। যদি কোনো ভ্যারিয়েবল ডিক্লেয়ার করে মান না দেওয়া হয়, তাহলে
-            সেটি স্বয়ংক্রিয়ভাবে NULL হয়ে যায়। আবার, কোনো ভ্যারিয়েবলের মান
-            মুছে ফেলতে চাইলে সেটিকে <code>NULL</code> সেট করতে পারেন।
-          </p>
-          <h3>Change Data Type</h3>
+          </pre>
+
+          <h4>3.2 Resource</h4>
           <p>
-            If you assign an integer value to a variable, the type will
-            automatically be an integer.<br />
-            If you assign a string to the same variable, the type will change to
-            a string:
+            A <strong>resource</strong> is a special variable that holds a
+            reference to an external resource, such as a database connection or
+            file handle.
           </p>
           <pre>
 &lt;?php
-$x = 10;           // $x is now an integer
-var_dump($x);      // Outputs: int(10)
+// File resource
+$file = fopen("example.txt", "r");
+if ($file) {
+    echo "File opened successfully&lt;br&gt;";
+    echo "Resource type: " . gettype($file) . "&lt;br&gt;";
+    fclose($file);
+}
 
-$x = "Hello PHP";  // $x is now a string
-var_dump($x);      // Outputs: string(9) "Hello PHP"
+// Database connection (example)
+// $connection = mysqli_connect("localhost", "username", "password", "database");
+// echo "Connection type: " . gettype($connection);
 ?&gt;
-        </pre
-          >
-          <p class="bangla">
-            যদি কোনো ভ্যারিয়েবলে ইন্টিজার মান অ্যাসাইন করেন, তাহলে সেটি
-            স্বয়ংক্রিয়ভাবে ইন্টিজার টাইপ হয়ে যায়।<br />
-            আবার, একই ভ্যারিয়েবলে স্ট্রিং মান অ্যাসাইন করলে টাইপ পরিবর্তন হয়ে
-            স্ট্রিং হয়ে যাবে।
-          </p>
+          </pre>
+
+          <h3>4. Type Checking and Conversion</h3>
+
+          <h4>4.1 Type Checking Functions</h4>
+          <pre>
+&lt;?php
+$string = "Hello";
+$integer = 42;
+$float = 3.14;
+$boolean = true;
+$array = [1, 2, 3];
+$null = NULL;
+
+// Type checking functions
+echo "is_string(): " . (is_string($string) ? "true" : "false") . "&lt;br&gt;";
+echo "is_int(): " . (is_int($integer) ? "true" : "false") . "&lt;br&gt;";
+echo "is_float(): " . (is_float($float) ? "true" : "false") . "&lt;br&gt;";
+echo "is_bool(): " . (is_bool($boolean) ? "true" : "false") . "&lt;br&gt;";
+echo "is_array(): " . (is_array($array) ? "true" : "false") . "&lt;br&gt;";
+echo "is_null(): " . (is_null($null) ? "true" : "false") . "&lt;br&gt;";
+
+// gettype() function
+echo "String type: " . gettype($string) . "&lt;br&gt;";
+echo "Integer type: " . gettype($integer) . "&lt;br&gt;";
+?&gt;
+          </pre>
+
+          <h4>4.2 Type Conversion</h4>
+          <pre>
+&lt;?php
+// Automatic type conversion
+$x = "10";
+$y = 5;
+
+echo "String + Integer: " . ($x + $y) . "&lt;br&gt;"; // 15 (integer)
+
+// Explicit type casting
+$string_num = "42.5";
+$integer_cast = (int)$string_num;
+$float_cast = (float)$string_num;
+$string_cast = (string)$integer_cast;
+
+echo "Original: $string_num&lt;br&gt;";
+echo "As integer: $integer_cast&lt;br&gt;";
+echo "As float: $float_cast&lt;br&gt;";
+echo "As string: $string_cast&lt;br&gt;";
+
+// Boolean conversion
+$truthy = "Hello";
+$falsy = "";
+
+echo "Truthy as bool: " . (bool)$truthy . "&lt;br&gt;";
+echo "Falsy as bool: " . (bool)$falsy . "&lt;br&gt;";
+?&gt;
+          </pre>
+
+          <h3>5. Variable Scope and Lifetime</h3>
+          <pre>
+&lt;?php
+// Global variable
+$global_var = "I'm global";
+
+function testFunction() {
+    global $global_var; // Access global variable
+    $local_var = "I'm local";
+    
+    echo "Global: $global_var&lt;br&gt;";
+    echo "Local: $local_var&lt;br&gt;";
+}
+
+testFunction();
+echo "Outside function: $global_var&lt;br&gt;";
+// echo $local_var; // This would cause an error
+?&gt;
+          </pre>
+
+          <h3>📊 PHP Data Types Summary</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Description</th>
+                <th>Example</th>
+                <th>Size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>String</code></td>
+                <td>Sequence of characters</td>
+                <td><code>"Hello World"</code></td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td><code>Integer</code></td>
+                <td>Whole numbers</td>
+                <td><code>42, -17, 0</code></td>
+                <td>4 bytes</td>
+              </tr>
+              <tr>
+                <td><code>Float</code></td>
+                <td>Decimal numbers</td>
+                <td><code>3.14, 2.5e3</code></td>
+                <td>8 bytes</td>
+              </tr>
+              <tr>
+                <td><code>Boolean</code></td>
+                <td>True or false</td>
+                <td><code>true, false</code></td>
+                <td>1 byte</td>
+              </tr>
+              <tr>
+                <td><code>Array</code></td>
+                <td>Collection of values</td>
+                <td><code>["a", "b", "c"]</code></td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td><code>Object</code></td>
+                <td>Instance of a class</td>
+                <td><code>new Car()</code></td>
+                <td>Variable</td>
+              </tr>
+              <tr>
+                <td><code>NULL</code></td>
+                <td>No value</td>
+                <td><code>NULL</code></td>
+                <td>0 bytes</td>
+              </tr>
+              <tr>
+                <td><code>Resource</code></td>
+                <td>External resource reference</td>
+                <td><code>fopen()</code></td>
+                <td>Variable</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>🔧 Type Checking Functions</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Function</th>
+                <th>Description</th>
+                <th>Returns</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>is_string()</code></td>
+                <td>Check if variable is string</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>is_int()</code></td>
+                <td>Check if variable is integer</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>is_float()</code></td>
+                <td>Check if variable is float</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>is_bool()</code></td>
+                <td>Check if variable is boolean</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>is_array()</code></td>
+                <td>Check if variable is array</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>is_object()</code></td>
+                <td>Check if variable is object</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>is_null()</code></td>
+                <td>Check if variable is NULL</td>
+                <td>true/false</td>
+              </tr>
+              <tr>
+                <td><code>gettype()</code></td>
+                <td>Get variable type name</td>
+                <td>string</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- INSERT_YOUR_CODE -->
         </section>
       </main>
     </div>

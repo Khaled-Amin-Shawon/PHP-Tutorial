@@ -32,7 +32,7 @@
         <a href="if-else.html">PHP If...Else...Elseif</a>
         <a href="switch.html">PHP Switch</a>
         <a href="loops.html">PHP Loops</a>
-        <a href="functions.html">PHP Functions</a>
+        <a href="functions.html" class="active">PHP Functions</a>
         <a href="arrays.html">PHP Arrays</a>
       </nav>
     </div>
@@ -44,30 +44,54 @@
         <section class="section" id="functions">
           <h2>PHP Functions</h2>
           <p>
-            Functions are blocks of code that can be reused. Define a function
-            using the <code>function</code> keyword.
+            In PHP, a <strong>function</strong> is a block of code that performs a specific task and can be reused throughout your script. You define a function using the <code>function</code> keyword, followed by the function name and parentheses. You can also pass information to functions using parameters.
+          </p>
+          <h3>How to Define and Call a Function</h3>
+          <pre>
+&lt;?php
+function sayHello() {
+    echo "Hello from a function!";
+}
+sayHello(); // Output: Hello from a function!
+?&gt;
+          </pre>
+          <div class="example-output">Hello from a function!</div>
+          <p>
+            You can also pass parameters to a function:
           </p>
           <pre>
 &lt;?php
-    function greet($name) {
-        return "Hello, $name!";
-    }
-    echo greet("PHP");
-?&gt;</pre
-          >
+function greet($name) {
+    return "Hello, $name!";
+}
+echo greet("PHP"); // Output: Hello, PHP!
+?&gt;
+          </pre>
           <div class="example-output">Hello, PHP!</div>
+          <h3>Bangla Explanation</h3>
           <p class="bangla">
-            ফাংশন হলো কোডের এমন একটি অংশ, যেটি বারবার ব্যবহার করা যায়।
-            <code>function</code> কীওয়ার্ড দিয়ে ফাংশন ডিফাইন করা হয়।
+            PHP-তে <strong>function</strong> হলো কোডের এমন একটি অংশ, যেটি নির্দিষ্ট কাজ করে এবং বারবার ব্যবহার করা যায়। <code>function</code> কীওয়ার্ড দিয়ে ফাংশন ডিফাইন করতে হয়। ফাংশনে প্যারামিটারও পাঠানো যায়।
           </p>
           <pre class="bangla">
 &lt;?php
-    function greet($name) {
-        return "হ্যালো, $name!";
-    }
-    echo greet("পিএইচপি");
-?&gt;</pre
-          >
+function sayHello() {
+    echo "একটি ফাংশন থেকে হ্যালো!";
+}
+sayHello(); // আউটপুট: একটি ফাংশন থেকে হ্যালো!
+?&gt;
+          </pre>
+          <div class="example-output">একটি ফাংশন থেকে হ্যালো!</div>
+          <p class="bangla">
+            প্যারামিটারসহ ফাংশন:
+          </p>
+          <pre class="bangla">
+&lt;?php
+function greet($name) {
+    return "হ্যালো, $name!";
+}
+echo greet("পিএইচপি"); // আউটপুট: হ্যালো, পিএইচপি!
+?&gt;
+          </pre>
           <div class="example-output">হ্যালো, পিএইচপি!</div>
         </section>
       </main>

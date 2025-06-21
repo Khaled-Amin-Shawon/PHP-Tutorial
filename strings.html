@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHP Strings - PHP Tutorial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="toggleBtn">☰ Menu</button>
+    <div class="sidebar">
+      <nav>
+        <a href="index.html">PHP HOME</a>
+        <a href="intro.html">PHP Intro</a>
+        <a href="install.html">PHP Install</a>
+        <a href="syntax.html">PHP Syntax</a>
+        <a href="comments.html">PHP Comments</a>
+        <a href="variables.html">PHP Variables</a>
+        <a href="echo-print.html">PHP Echo / Print</a>
+        <a href="datatypes.html">PHP Data Types</a>
+        <a href="strings.html" class="active">PHP Strings</a>
+        <a href="numbers.html">PHP Numbers</a>
+        <a href="casting.html">PHP Casting</a>
+        <a href="math.html">PHP Math</a>
+        <a href="constants.html">PHP Constants</a>
+        <a href="magic-constants.html">PHP Magic Constants</a>
+        <a href="operators.html">PHP Operators</a>
+        <a href="if-else.html">PHP If...Else...Elseif</a>
+        <a href="switch.html">PHP Switch</a>
+        <a href="loops.html">PHP Loops</a>
+        <a href="functions.html">PHP Functions</a>
+        <a href="arrays.html">PHP Arrays</a>
+      </nav>
+    </div>
+    <div class="content">
+      <header>
+        <h1>PHP Strings</h1>
+      </header>
+      <main>
+        <section class="section" id="strings">
+          <h2>PHP Strings</h2>
+          <!-- INSERT_YOUR_CODE -->
+          <p>
+            A string is a sequence of characters, like "Hello World!". Strings
+            in PHP can be created using single quotes, double quotes, or heredoc
+            syntax.
+          </p>
+
+          <h3>1. Creating Strings</h3>
+          <p>There are several ways to create strings in PHP:</p>
+          <pre>
+&lt;?php
+// Single quotes
+$str1 = 'Hello World!';
+
+// Double quotes
+$str2 = "Hello World!";
+
+// Heredoc syntax
+$str3 = &lt;&lt;&lt;EOT
+This is a heredoc string
+It can span multiple lines
+EOT;
+
+echo $str1 . "&lt;br&gt;";
+echo $str2 . "&lt;br&gt;";
+echo $str3;
+?&gt;
+          </pre>
+
+          <h3>2. String Length</h3>
+          <p>
+            Use the <code>strlen()</code> function to get the length of a
+            string:
+          </p>
+          <pre>
+&lt;?php
+$text = "Hello World!";
+echo "String length: " . strlen($text); // Output: 12
+?&gt;
+          </pre>
+
+          <h3>3. String Functions</h3>
+          <p>PHP provides many built-in functions for string manipulation:</p>
+
+          <h4>3.1 strtolower() and strtoupper()</h4>
+          <pre>
+&lt;?php
+$text = "Hello World!";
+echo strtolower($text); // Output: hello world!
+echo "&lt;br&gt;";
+echo strtoupper($text); // Output: HELLO WORLD!
+?&gt;
+          </pre>
+
+          <h4>3.2 ucfirst() and ucwords()</h4>
+          <pre>
+&lt;?php
+$text = "hello world!";
+echo ucfirst($text); // Output: Hello world!
+echo "&lt;br&gt;";
+echo ucwords($text); // Output: Hello World!
+?&gt;
+          </pre>
+
+          <h4>3.3 str_replace()</h4>
+          <pre>
+&lt;?php
+$text = "Hello World!";
+$new_text = str_replace("World", "PHP", $text);
+echo $new_text; // Output: Hello PHP!
+?&gt;
+          </pre>
+
+          <h4>3.4 substr()</h4>
+          <pre>
+&lt;?php
+$text = "Hello World!";
+echo substr($text, 0, 5); // Output: Hello
+echo "&lt;br&gt;";
+echo substr($text, 6); // Output: World!
+?&gt;
+          </pre>
+
+          <h3>4. String Concatenation</h3>
+          <p>You can concatenate strings using the dot (.) operator:</p>
+          <pre>
+&lt;?php
+$first = "Hello";
+$second = "World";
+$result = $first . " " . $second;
+echo $result; // Output: Hello World
+
+// Using .= operator
+$text = "Hello";
+$text .= " World!";
+echo $text; // Output: Hello World!
+?&gt;
+          </pre>
+
+          <h3>5. String Comparison</h3>
+          <p>You can compare strings using various operators and functions:</p>
+          <pre>
+&lt;?php
+$str1 = "Hello";
+$str2 = "Hello";
+$str3 = "hello";
+
+// Using == operator
+if ($str1 == $str2) {
+    echo "Strings are equal&lt;br&gt;";
+}
+
+// Using strcmp() function
+if (strcmp($str1, $str2) == 0) {
+    echo "Strings are identical&lt;br&gt;";
+}
+
+// Case-insensitive comparison
+if (strcasecmp($str1, $str3) == 0) {
+    echo "Strings are equal (case-insensitive)&lt;br&gt;";
+}
+?&gt;
+          </pre>
+
+          <h3>6. String Searching</h3>
+          <p>Find substrings within strings using various functions:</p>
+          <pre>
+&lt;?php
+$text = "Hello World!";
+
+// strpos() - find position of substring
+$pos = strpos($text, "World");
+echo "Position of 'World': " . $pos; // Output: 6
+
+// stripos() - case-insensitive search
+$pos = stripos($text, "world");
+echo "&lt;br&gt;Position of 'world' (case-insensitive): " . $pos; // Output: 6
+
+// str_contains() - check if string contains substring
+if (str_contains($text, "World")) {
+    echo "&lt;br&gt;String contains 'World'";
+}
+?&gt;
+          </pre>
+
+          <h3>7. String Formatting</h3>
+          <p>Format strings using sprintf() and printf():</p>
+          <pre>
+&lt;?php
+$name = "John";
+$age = 25;
+
+// Using sprintf()
+$message = sprintf("My name is %s and I am %d years old.", $name, $age);
+echo $message;
+
+// Using printf()
+printf("&lt;br&gt;My name is %s and I am %d years old.", $name, $age);
+?&gt;
+          </pre>
+
+          <h3>8. String Trimming</h3>
+          <p>Remove whitespace from strings:</p>
+          <pre>
+&lt;?php
+$text = "  Hello World!  ";
+
+echo "Original: '" . $text . "'&lt;br&gt;";
+echo "Trimmed: '" . trim($text) . "'&lt;br&gt;";
+echo "Left trimmed: '" . ltrim($text) . "'&lt;br&gt;";
+echo "Right trimmed: '" . rtrim($text) . "'&lt;br&gt;";
+?&gt;
+          </pre>
+
+          <h3>9. String Splitting and Joining</h3>
+          <p>Split strings into arrays and join arrays into strings:</p>
+          <pre>
+&lt;?php
+$text = "apple,banana,orange";
+
+// Split string into array
+$fruits = explode(",", $text);
+print_r($fruits);
+
+// Join array into string
+$new_text = implode(" and ", $fruits);
+echo "&lt;br&gt;" . $new_text; // Output: apple and banana and orange
+?&gt;
+          </pre>
+
+          <h3>10. HTML Special Characters</h3>
+          <p>Convert special characters to HTML entities:</p>
+          <pre>
+&lt;?php
+$text = "&lt;script&gt;alert('Hello')&lt;/script&gt;";
+
+// Convert to HTML entities
+$safe_text = htmlspecialchars($text);
+echo $safe_text; // Output: &amp;lt;script&amp;gt;alert('Hello')&amp;lt;/script&amp;gt;
+
+// Convert back
+$original = htmlspecialchars_decode($safe_text);
+echo "&lt;br&gt;" . $original;
+?&gt;
+          </pre>
+
+          <h3>📊 Common String Functions Summary</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Function</th>
+                <th>Description</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>strlen()</code></td>
+                <td>Get string length</td>
+                <td><code>strlen("Hello")</code> → 5</td>
+              </tr>
+              <tr>
+                <td><code>strtolower()</code></td>
+                <td>Convert to lowercase</td>
+                <td><code>strtolower("HELLO")</code> → "hello"</td>
+              </tr>
+              <tr>
+                <td><code>strtoupper()</code></td>
+                <td>Convert to uppercase</td>
+                <td><code>strtoupper("hello")</code> → "HELLO"</td>
+              </tr>
+              <tr>
+                <td><code>ucfirst()</code></td>
+                <td>Capitalize first letter</td>
+                <td><code>ucfirst("hello")</code> → "Hello"</td>
+              </tr>
+              <tr>
+                <td><code>str_replace()</code></td>
+                <td>Replace substring</td>
+                <td><code>str_replace("old", "new", $text)</code></td>
+              </tr>
+              <tr>
+                <td><code>substr()</code></td>
+                <td>Extract substring</td>
+                <td><code>substr("Hello", 0, 3)</code> → "Hel"</td>
+              </tr>
+              <tr>
+                <td><code>strpos()</code></td>
+                <td>Find substring position</td>
+                <td><code>strpos("Hello", "o")</code> → 4</td>
+              </tr>
+              <tr>
+                <td><code>trim()</code></td>
+                <td>Remove whitespace</td>
+                <td><code>trim(" hello ")</code> → "hello"</td>
+              </tr>
+              <tr>
+                <td><code>explode()</code></td>
+                <td>Split string to array</td>
+                <td><code>explode(",", "a,b,c")</code> → ["a","b","c"]</td>
+              </tr>
+              <tr>
+                <td><code>implode()</code></td>
+                <td>Join array to string</td>
+                <td><code>implode("-", ["a","b","c"])</code> → "a-b-c"</td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- INSERT_YOUR_CODE -->
+        </section>
+      </main>
+    </div>
+    <footer class="site-footer">
+      &copy; 2024 PHP Tutorial. All rights reserved. | Crafted with
+      <span style="color: #ff6b6b; font-weight: bold">&#10084;</span> by
+      <span class="footer-author">Khaled Amin</span>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
