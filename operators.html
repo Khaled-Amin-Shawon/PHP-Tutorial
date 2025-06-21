@@ -600,13 +600,60 @@ $y = $a ?? $b; // $y = 10
           <p class="bangla">
             এখানে কন্ডিশনাল অ্যাসাইনমেন্ট অপারেটরের ব্যবহার দেখানো হয়েছে।
           </p>
+        <!-- INSERT_YOUR_CODE -->
+        <h3>Difference between <code>==</code> and <code>===</code> in PHP</h3>
+        <p>
+          In PHP, <strong><code>==</code> (Equality Operator)</strong> checks if the values of two operands are equal after type juggling (type conversion if needed).<br>
+          <strong><code>===</code> (Identity/Strict Equality Operator)</strong> checks if the values and the data types of two operands are both equal (no type conversion).
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Operator</th>
+              <th>Checks</th>
+              <th>Example</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>==</code></td>
+              <td>Value equality (type conversion allowed)</td>
+              <td><code>5 == "5"</code></td>
+              <td>true</td>
+            </tr>
+            <tr>
+              <td><code>===</code></td>
+              <td>Value and type equality (no type conversion)</td>
+              <td><code>5 === "5"</code></td>
+              <td>false</td>
+            </tr>
+          </tbody>
+        </table>
+        <pre><code class="language-php">&lt;?php
+$a = 5;
+$b = "5";
+
+var_dump($a == $b);   // Output: bool(true)
+var_dump($a === $b);  // Output: bool(false)
+?&gt;</code></pre>
+        <h4>বাংলা ব্যাখ্যা (Bangla Explanation)</h4>
+        <ul class="bangla">
+          <li>
+            <code>==</code> অপারেটর শুধু মান (value) চেক করে, টাইপ চেক করে না। যেমন: <code>5 == "5"</code> সত্য (true) হবে।
+          </li>
+          <li>
+            <code>===</code> অপারেটর মান এবং টাইপ দুটোই চেক করে। যেমন: <code>5 === "5"</code> মিথ্যা (false) হবে, কারণ একটির টাইপ integer, অন্যটি string।
+          </li>
+        </ul>
         </section>
       </main>
     </div>
 
     <footer class="site-footer">
-      &copy; 2024 PHP Tutorial. All rights reserved. | Crafted with 499 by
-      YourName
+      &copy; 2024 PHP Tutorial. All rights reserved. | Crafted with
+      <span style="color: #ff6b6b; font-weight: bold">&#10084;</span> by
+      <span class="footer-author">Khaled Amin</span>
     </footer>
 
     <script src="script.js"></script>

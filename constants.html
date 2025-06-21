@@ -43,26 +43,112 @@
       <main>
         <section class="section" id="constants">
           <h2>PHP Constants</h2>
+          <!-- INSERT_YOUR_CODE -->
           <p>
-            Constants are like variables, but once defined, they cannot be
-            changed. Use <code>define()</code> to create a constant.
+            In PHP, <strong>constants</strong> are like variables, but once they are defined, their values cannot be changed or undefined. Constants are useful for storing values that should remain the same throughout the execution of a script, such as configuration values, API keys, or mathematical constants.
           </p>
-          <pre>
-&lt;?php
-    define("SITE_NAME", "My Website");
-    echo SITE_NAME;
-?&gt;</pre
-          >
-          <p class="bangla">
-            কনস্ট্যান্ট ভেরিয়েবলের মতো, তবে একবার ডিফাইন করলে পরিবর্তন করা যায়
-            না। <code>define()</code> ফাংশন দিয়ে কনস্ট্যান্ট তৈরি করা হয়।
+          <h4>How to define a constant in PHP?</h4>
+          <ul>
+            <li>
+              <strong>Using <code>define()</code> function:</strong>
+              <pre><code class="language-php">&lt;?php
+define("SITE_NAME", "MyWebsite");
+echo SITE_NAME; // Output: MyWebsite
+?&gt;</code></pre>
+              <p>
+                <b>Note:</b> <code>define()</code> is used outside of classes and can be used anywhere in your code, even inside functions.
+              </p>
+            </li>
+            <li>
+              <strong>Using <code>const</code> keyword:</strong>
+              <pre><code class="language-php">&lt;?php
+const PI = 3.1416;
+echo PI; // Output: 3.1416
+?&gt;</code></pre>
+              <p>
+                <b>Note:</b> <code>const</code> is a language construct and is often used to define constants inside classes or at the top level of a script (not inside functions or loops).
+              </p>
+            </li>
+          </ul>
+          <h4>Key Points about Constants</h4>
+          <ul>
+            <li>Constant names are usually written in uppercase letters by convention.</li>
+            <li>Constants do not start with a <code>$</code> sign.</li>
+            <li>Constants are automatically global and can be used across the entire script.</li>
+            <li>Once set, the value of a constant cannot be changed or undefined.</li>
+          </ul>
+          <h4>Example: Using Constants in PHP</h4>
+          <pre><code class="language-php">&lt;?php
+define("GREETING", "Welcome to PHP!");
+const VERSION = "8.2";
+
+echo GREETING; // Output: Welcome to PHP!
+echo VERSION;  // Output: 8.2
+?&gt;</code></pre>
+          <h4>বাংলা ব্যাখ্যা (Bangla Explanation)</h4>
+          <p>
+            PHP-তে <strong>constant</strong> হচ্ছে এমন একটি মান, যেটি একবার নির্ধারণ করার পর পরিবর্তন করা যায় না। সাধারণত <code>define()</code> ফাংশন অথবা <code>const</code> কীওয়ার্ড ব্যবহার করে constant তৈরি করা হয়।<br>
+            <b>উদাহরণ:</b>
           </p>
-          <pre class="bangla">
-&lt;?php
-    define("SITE_NAME", "আমার ওয়েবসাইট");
-    echo SITE_NAME;
-?&gt;</pre
-          >
+          <pre><code class="language-php">&lt;?php
+define("APP_NAME", "আমার অ্যাপ");
+const COUNTRY = "বাংলাদেশ";
+
+echo APP_NAME;   // আউটপুট: আমার অ্যাপ
+echo COUNTRY;    // আউটপুট: বাংলাদেশ
+?&gt;</code></pre>
+          <ul>
+            <li>constant-এর নাম সাধারণত বড় হাতের অক্ষরে লেখা হয়।</li>
+            <li>constant-এর আগে <code>$</code> চিহ্ন ব্যবহার হয় না।</li>
+            <li>একবার মান সেট করলে তা পরিবর্তন করা যায় না।</li>
+          </ul>
+          <h3>const vs. define() in PHP</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th><code>const</code></th>
+                <th><code>define()</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Syntax</td>
+                <td>Language construct</td>
+                <td>Function</td>
+              </tr>
+              <tr>
+                <td>Scope</td>
+                <td>Global + class</td>
+                <td>Global only</td>
+              </tr>
+              <tr>
+                <td>Used in class</td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td>Used in functions</td>
+                <td>❌ No</td>
+                <td>✅ Yes</td>
+              </tr>
+              <tr>
+                <td>Namespace aware</td>
+                <td>✅ Yes</td>
+                <td>❌ No</td>
+              </tr>
+              <tr>
+                <td>Value types allowed</td>
+                <td>Scalar only</td>
+                <td>Scalar only</td>
+              </tr>
+              <tr>
+                <td>When evaluated</td>
+                <td>Compile-time</td>
+                <td>Runtime</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </main>
     </div>

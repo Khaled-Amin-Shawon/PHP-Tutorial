@@ -24,7 +24,7 @@
         <a href="datatypes.html">PHP Data Types</a>
         <a href="strings.html">PHP Strings</a>
         <a href="numbers.html">PHP Numbers</a>
-        <a href="casting.html">PHP Casting</a>
+        <a href="casting.html" class="active">PHP Casting</a>
         <a href="math.html">PHP Math</a>
         <a href="constants.html">PHP Constants</a>
         <a href="magic-constants.html">PHP Magic Constants</a>
@@ -43,28 +43,173 @@
       <main>
         <section class="section" id="casting">
           <h2>PHP Casting</h2>
-          <p>
-            Casting is used to change a variable from one data type to another
-            in PHP.
-          </p>
-          <pre>
-&lt;?php
-    $x = 10.5;
-    $y = (int)$x; // Cast float to integer
-    echo $y; // 10
-?&gt;</pre
-          >
-          <p class="bangla">
-            PHP-তে কাস্টিং ব্যবহার করে একটি ভেরিয়েবলের ডেটা টাইপ পরিবর্তন করা
-            যায়।
-          </p>
-          <pre class="bangla">
-&lt;?php
-    $x = ১০.৫;
-    $y = (int)$x; // float থেকে integer
-    echo $y; // ১০
-?&gt;</pre
-          >
+        <!-- INSERT_YOUR_CODE -->
+        <p>
+          <strong>Type casting</strong> in PHP means converting a variable from one data type to another. This is useful when you want to ensure a value is treated as a specific type, such as integer, float, string, etc.
+        </p>
+
+        <h4>How to Cast Types in PHP?</h4>
+        <p>
+          You can cast a variable to another type by placing the type in parentheses before the variable.
+        </p>
+        <pre><code class="language-php">&lt;?php
+$number = "42";
+$intNumber = (int)$number; // Cast to integer
+$floatNumber = (float)$number; // Cast to float
+$stringNumber = (string)$number; // Cast to string
+
+echo $intNumber;    // Output: 42
+echo $floatNumber;  // Output: 42
+echo $stringNumber; // Output: 42
+?&gt;</code></pre>
+
+        <h4>Available Cast Types</h4>
+        <ul>
+          <li><code>(int)</code> or <code>(integer)</code> &mdash; Cast to integer</li>
+          <li><code>(float)</code> or <code>(double)</code> or <code>(real)</code> &mdash; Cast to float</li>
+          <li><code>(string)</code> &mdash; Cast to string</li>
+          <li><code>(bool)</code> or <code>(boolean)</code> &mdash; Cast to boolean</li>
+          <li><code>(array)</code> &mdash; Cast to array</li>
+          <li><code>(object)</code> &mdash; Cast to object</li>
+          <li><code>(unset)</code> &mdash; Cast to NULL</li>
+        </ul>
+
+        <h4>Example: Casting String to Integer</h4>
+        <pre><code class="language-php">&lt;?php
+$value = "123abc";
+$intValue = (int)$value;
+echo $intValue; // Output: 123
+?&gt;</code></pre>
+
+        <h4>Example: Casting Float to Integer</h4>
+        <pre><code class="language-php">&lt;?php
+$floatValue = 5.99;
+$intValue = (int)$floatValue;
+echo $intValue; // Output: 5
+?&gt;</code></pre>
+
+        <h4>Example: Casting to Boolean</h4>
+        <pre><code class="language-php">&lt;?php
+$val1 = 0;
+$val2 = 42;
+$val3 = "";
+
+echo (bool)$val1; // Output: (nothing, false)
+echo (bool)$val2; // Output: 1 (true)
+echo (bool)$val3; // Output: (nothing, false)
+?&gt;</code></pre>
+
+        <h3>Type Casting Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Cast Type</th>
+              <th>Syntax</th>
+              <th>Result Example</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Integer</td>
+              <td><code>(int)$var</code></td>
+              <td><code>(int)"12.5"</code> → 12</td>
+              <td>Converts to integer (removes decimal, parses from string start)</td>
+            </tr>
+            <tr>
+              <td>Float</td>
+              <td><code>(float)$var</code></td>
+              <td><code>(float)"12.5"</code> → 12.5</td>
+              <td>Converts to floating point number</td>
+            </tr>
+            <tr>
+              <td>String</td>
+              <td><code>(string)$var</code></td>
+              <td><code>(string)123</code> → "123"</td>
+              <td>Converts to string</td>
+            </tr>
+            <tr>
+              <td>Boolean</td>
+              <td><code>(bool)$var</code></td>
+              <td><code>(bool)0</code> → false</td>
+              <td>Converts to true/false</td>
+            </tr>
+            <tr>
+              <td>Array</td>
+              <td><code>(array)$var</code></td>
+              <td><code>(array)5</code> → [5]</td>
+              <td>Converts to array</td>
+            </tr>
+            <tr>
+              <td>Object</td>
+              <td><code>(object)$var</code></td>
+              <td><code>(object)5</code> → object with property 'scalar'</td>
+              <td>Converts to object</td>
+            </tr>
+            <tr>
+              <td>NULL</td>
+              <td><code>(unset)$var</code></td>
+              <td><code>(unset)5</code> → NULL</td>
+              <td>Converts to NULL (rarely used)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Automatic Type Juggling</h4>
+        <p>
+          PHP automatically converts types when needed (called "type juggling"). For example, adding a string and a number:
+        </p>
+        <pre><code class="language-php">&lt;?php
+$a = "10";
+$b = 5;
+$c = $a + $b; // $a is automatically cast to integer
+echo $c; // Output: 15
+?&gt;</code></pre>
+        <p>
+          However, for strict type conversion, use explicit casting as shown above.
+        </p>
+
+        <h4>বাংলা ব্যাখ্যা (Bangla Explanation)</h4>
+        <p>
+          <strong>PHP-তে কাস্টিং</strong> মানে হচ্ছে একটি ভেরিয়েবলকে এক ডেটা টাইপ থেকে অন্য ডেটা টাইপে রূপান্তর করা। এটি তখন দরকার হয় যখন আপনি চান কোনো মান নির্দিষ্ট টাইপে ব্যবহার করতে। যেমন, স্ট্রিংকে ইন্টিজার, ফ্লোট, বুলিয়ান ইত্যাদিতে কাস্ট করা যায়।
+        </p>
+        <h5>PHP-তে কাস্টিং করার নিয়ম</h5>
+        <ul>
+          <li><code>(int)</code> বা <code>(integer)</code> — ইন্টিজার টাইপে কাস্ট করে। যেমন: <code>(int)"12.5"</code> আউটপুট: 12</li>
+          <li><code>(float)</code> — ফ্লোট টাইপে কাস্ট করে। যেমন: <code>(float)"12.5"</code> আউটপুট: 12.5</li>
+          <li><code>(string)</code> — স্ট্রিং টাইপে কাস্ট করে। যেমন: <code>(string)123</code> আউটপুট: "123"</li>
+          <li><code>(bool)</code> — বুলিয়ান টাইপে কাস্ট করে। যেমন: <code>(bool)0</code> আউটপুট: false</li>
+          <li><code>(array)</code> — অ্যারে টাইপে কাস্ট করে। যেমন: <code>(array)5</code> আউটপুট: [5]</li>
+          <li><code>(object)</code> — অবজেক্ট টাইপে কাস্ট করে। যেমন: <code>(object)5</code> আউটপুট: একটি অবজেক্ট</li>
+          <li><code>(unset)</code> — NULL-এ কাস্ট করে (খুব কম ব্যবহৃত হয়)</li>
+        </ul>
+        <h5>কাস্টিং-এর কিছু উদাহরণ</h5>
+        <pre><code class="language-php">&lt;?php
+// স্ট্রিং থেকে ইন্টিজার
+$text = "100.5";
+$number = (int)$text; // 100
+
+// ফ্লোট থেকে ইন্টিজার
+$floatVal = 7.99;
+$intVal = (int)$floatVal; // 7
+
+// ইন্টিজার থেকে বুলিয়ান
+$flag = (bool)$number; // true (1)
+
+// অ্যারে কাস্টিং
+$val = 5;
+$arr = (array)$val; // [5]
+
+// অবজেক্ট কাস্টিং
+$obj = (object)$val; // stdClass Object ( [scalar] => 5 )
+?&gt;</code></pre>
+        <h5>কিছু গুরুত্বপূর্ণ বিষয়</h5>
+        <ul>
+          <li>কাস্টিং করার জন্য টাইপটি ব্র্যাকেটের মধ্যে লিখে ভেরিয়েবলের আগে বসাতে হয়।</li>
+          <li>স্ট্রিং থেকে ইন্টিজার কাস্ট করলে, স্ট্রিং-এর শুরুতে যতক্ষণ সংখ্যা থাকবে, ততক্ষণ পর্যন্ত সংখ্যা নেয়।</li>
+          <li>বুলিয়ান কাস্টিং: 0, "0", "", NULL, [], ইত্যাদি false; অন্য সব true।</li>
+          <li>PHP স্বয়ংক্রিয়ভাবে অনেক সময় টাইপ পরিবর্তন করে (type juggling), তবে নির্দিষ্ট টাইপ চাইলে কাস্টিং ব্যবহার করুন।</li>
+        </ul>
         </section>
       </main>
     </div>

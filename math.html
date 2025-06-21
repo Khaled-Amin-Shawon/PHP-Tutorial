@@ -25,7 +25,7 @@
         <a href="strings.html">PHP Strings</a>
         <a href="numbers.html">PHP Numbers</a>
         <a href="casting.html">PHP Casting</a>
-        <a href="math.html">PHP Math</a>
+        <a href="math.html"class="active">PHP Math</a>
         <a href="constants.html">PHP Constants</a>
         <a href="magic-constants.html">PHP Magic Constants</a>
         <a href="operators.html">PHP Operators</a>
@@ -43,32 +43,101 @@
       <main>
         <section class="section" id="math">
           <h2>PHP Math</h2>
+        <!-- INSERT_YOUR_CODE -->
           <p>
-            PHP provides many built-in math functions, such as
-            <code>abs()</code>, <code>pow()</code>, <code>sqrt()</code>,
-            <code>round()</code>, etc.
+            PHP provides a wide range of built-in mathematical functions to perform calculations, such as addition, subtraction, rounding, generating random numbers, and more. These functions make it easy to handle mathematical operations in your PHP scripts.
           </p>
-          <pre>
-&lt;?php
-    echo abs(-5);      // 5
-    echo pow(2, 3);    // 8
-    echo sqrt(16);     // 4
-    echo round(3.7);   // 4
-?&gt;</pre
-          >
-          <p class="bangla">
-            PHP-তে অনেক বিল্ট-ইন ম্যাথ ফাংশন আছে, যেমন <code>abs()</code>,
-            <code>pow()</code>, <code>sqrt()</code>,
-            <code>round()</code> ইত্যাদি।
-          </p>
-          <pre class="bangla">
-&lt;?php
-    echo abs(-৫);      // ৫
-    echo pow(২, ৩);    // ৮
-    echo sqrt(১৬);     // ৪
-    echo round(৩.৭);   // ৪
-?&gt;</pre
-          >
+
+          <h4>Common PHP Math Functions</h4>
+          <ul>
+            <li><code>abs(x)</code> &mdash; Returns the absolute (positive) value of <code>x</code></li>
+            <li><code>pow(x, y)</code> &mdash; Returns <code>x</code> raised to the power of <code>y</code></li>
+            <li><code>sqrt(x)</code> &mdash; Returns the square root of <code>x</code></li>
+            <li><code>round(x)</code> &mdash; Rounds <code>x</code> to the nearest integer</li>
+            <li><code>ceil(x)</code> &mdash; Rounds <code>x</code> up to the nearest integer</li>
+            <li><code>floor(x)</code> &mdash; Rounds <code>x</code> down to the nearest integer</li>
+            <li><code>min(x, y, ...)</code> &mdash; Returns the lowest value</li>
+            <li><code>max(x, y, ...)</code> &mdash; Returns the highest value</li>
+            <li><code>rand(min, max)</code> &mdash; Returns a random integer between <code>min</code> and <code>max</code></li>
+            <li><code>pi()</code> &mdash; Returns the value of π (pi)</li>
+          </ul>
+
+          <h4>Example: Basic Math Functions in PHP</h4>
+          <pre><code class="language-php">&lt;?php
+echo abs(-15);         // Output: 15
+echo pow(2, 3);        // Output: 8
+echo sqrt(16);         // Output: 4
+echo round(3.7);       // Output: 4
+echo ceil(3.2);        // Output: 4
+echo floor(3.8);       // Output: 3
+echo min(2, 5, 1, 9);  // Output: 1
+echo max(2, 5, 1, 9);  // Output: 9
+echo rand(1, 100);     // Output: (random number between 1 and 100)
+echo pi();             // Output: 3.1415926535898
+?&gt;</code></pre>
+
+          <h4>Math Functions Table</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Function</th>
+                <th>Description (English)</th>
+                <th>বর্ণনা (Bangla)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>abs(x)</code></td>
+                <td>Absolute value of x</td>
+                <td>x-এর পরম মান</td>
+              </tr>
+              <tr>
+                <td><code>pow(x, y)</code></td>
+                <td>x raised to the power y</td>
+                <td>x-এর y ঘাতফল</td>
+              </tr>
+              <tr>
+                <td><code>sqrt(x)</code></td>
+                <td>Square root of x</td>
+                <td>x-এর বর্গমূল</td>
+              </tr>
+              <tr>
+                <td><code>round(x)</code></td>
+                <td>Round x to nearest integer</td>
+                <td>x কে কাছাকাছি পূর্ণসংখ্যায় রাউন্ড করে</td>
+              </tr>
+              <tr>
+                <td><code>ceil(x)</code></td>
+                <td>Round x up</td>
+                <td>x কে উপরের দিকে পূর্ণসংখ্যায় রাউন্ড করে</td>
+              </tr>
+              <tr>
+                <td><code>floor(x)</code></td>
+                <td>Round x down</td>
+                <td>x কে নিচের দিকে পূর্ণসংখ্যায় রাউন্ড করে</td>
+              </tr>
+              <tr>
+                <td><code>min(...)</code></td>
+                <td>Lowest value</td>
+                <td>সবচেয়ে ছোট মান</td>
+              </tr>
+              <tr>
+                <td><code>max(...)</code></td>
+                <td>Highest value</td>
+                <td>সবচেয়ে বড় মান</td>
+              </tr>
+              <tr>
+                <td><code>rand(min, max)</code></td>
+                <td>Random number between min and max</td>
+                <td>min এবং max এর মধ্যে র‍্যান্ডম সংখ্যা</td>
+              </tr>
+              <tr>
+                <td><code>pi()</code></td>
+                <td>Value of pi</td>
+                <td>π (পাই) এর মান</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </main>
     </div>

@@ -31,7 +31,7 @@
         <a href="operators.html">PHP Operators</a>
         <a href="if-else.html">PHP If...Else...Elseif</a>
         <a href="switch.html">PHP Switch</a>
-        <a href="loops.html">PHP Loops</a>
+        <a href="loops.html" class="active">PHP Loops</a>
         <a href="functions.html">PHP Functions</a>
         <a href="arrays.html">PHP Arrays</a>
       </nav>
@@ -43,82 +43,147 @@
       <main>
         <section class="section" id="loops">
           <h2>PHP Loops</h2>
+          <!-- INSERT_YOUR_CODE -->
           <p>
-            Loops are used to execute the same block of code multiple times.
-            Common loops in PHP are <code>for</code>, <code>while</code>, and
-            <code>foreach</code>.
+            In PHP, loops are used to execute a block of code repeatedly as long
+            as a certain condition is true. There are several types of loops in
+            PHP:
           </p>
-          <h3>for loop</h3>
-          <pre>
-&lt;?php
-    for ($i = 1; $i <= 3; $i++) {
-        echo $i;
-    }
-?&gt;</pre
-          >
-          <div class="example-output">123</div>
-          <h3>while loop</h3>
-          <pre>
-&lt;?php
-    $i = 1;
-    while ($i <= 3) {
-        echo $i;
-        $i++;
-    }
-?&gt;</pre
-          >
-          <div class="example-output">123</div>
-          <h3>foreach loop</h3>
-          <pre>
-&lt;?php
-    $arr = ["a", "b", "c"];
-    foreach ($arr as $val) {
-        echo $val;
-    }
-?&gt;</pre
-          >
-          <div class="example-output">abc</div>
-          <p class="bangla">
-            একই কোড বারবার চালাতে লুপ ব্যবহার করা হয়। PHP-তে সাধারণত
-            <code>for</code>, <code>while</code>, <code>foreach</code> লুপ
-            ব্যবহৃত হয়।
+          <ul>
+            <li><strong>while</strong> loop</li>
+            <li><strong>do...while</strong> loop</li>
+            <li><strong>for</strong> loop</li>
+            <li><strong>foreach</strong> loop (used for arrays)</li>
+          </ul>
+
+          <h3>1. while Loop</h3>
+          <p>
+            The <code>while</code> loop executes a block of code as long as the
+            specified condition is true.
           </p>
-          <h3 class="bangla">for loop</h3>
-          <pre class="bangla">
+          <pre>
 &lt;?php
-    for ($i = ১; $i <= ৩; $i++) {
-        echo $i;
-    }
-?&gt;</pre
+$x = 1;
+while ($x <= 5) {
+    echo "The number is: $x &lt;br&gt;";
+    $x++;
+}
+?&gt;
+        </pre
           >
-          <div class="example-output">১২৩</div>
-          <h3 class="bangla">while loop</h3>
-          <pre class="bangla">
+
+          <h3>2. do...while Loop</h3>
+          <p>
+            The <code>do...while</code> loop will always execute the block of
+            code once, then check the condition and repeat as long as the
+            condition is true.
+          </p>
+          <pre>
 &lt;?php
-    $i = ১;
-    while ($i <= ৩) {
-        echo $i;
-        $i++;
-    }
-?&gt;</pre
+$x = 1;
+do {
+    echo "The number is: $x &lt;br&gt;";
+    $x++;
+} while ($x <= 5);
+?&gt;
+        </pre
           >
-          <div class="example-output">১২৩</div>
-          <h3 class="bangla">foreach loop</h3>
-          <pre class="bangla">
+
+          <h3>3. for Loop</h3>
+          <p>
+            The <code>for</code> loop is used when you know in advance how many
+            times you want to execute a statement or a block of statements.
+          </p>
+          <pre>
 &lt;?php
-    $arr = ["ক", "খ", "গ"];
-    foreach ($arr as $val) {
-        echo $val;
-    }
-?&gt;</pre
+for ($x = 1; $x <= 5; $x++) {
+    echo "The number is: $x &lt;br&gt;";
+}
+?&gt;
+        </pre
           >
-          <div class="example-output">কখগ</div>
+
+          <h3>4. foreach Loop</h3>
+          <p>
+            The <code>foreach</code> loop is used to loop through each element
+            in an array.
+          </p>
+          <pre>
+&lt;?php
+$colors = array("red", "green", "blue");
+foreach ($colors as $value) {
+    echo "$value &lt;br&gt;";
+}
+?&gt;
+        </pre
+          >
+          <!-- INSERT_YOUR_CODE -->
+          <h3>Difference Between Entry-Centric and Exit-Centric Loop</h3>
+          <p>
+            In PHP, loops can be categorized based on where the condition is
+            checked: <strong>entry-centric</strong> (condition checked before
+            entering the loop body) and <strong>exit-centric</strong> (condition
+            checked after executing the loop body at least once).
+          </p>
+          <ul>
+            <li>
+              <strong>Entry-Centric Loop:</strong> The condition is evaluated
+              <em>before</em> the loop body runs. If the condition is false at
+              the start, the loop body may not execute at all.<br />
+              <code>for</code> and <code>while</code> loops are entry-centric.
+            </li>
+            <li>
+              <strong>Exit-Centric Loop:</strong> The condition is evaluated
+              <em>after</em> the loop body runs. The loop body will always
+              execute at least once, even if the condition is false.<br />
+              <code>do...while</code> loop is exit-centric.
+            </li>
+          </ul>
+          <!-- INSERT_YOUR_CODE -->
+          <h3>📊 Difference Between Entry-Centric and Exit-Centric Loop</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Aspect</th>
+                <th>Entry-Centric Loop</th>
+                <th>Exit-Centric Loop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Condition check timing</td>
+                <td>Before entering the loop body</td>
+                <td>After executing the loop body</td>
+              </tr>
+              <tr>
+                <td>Minimum execution</td>
+                <td>May execute 0 times</td>
+                <td>Executes at least once</td>
+              </tr>
+              <tr>
+                <td>Loop types</td>
+                <td><code>for</code>, <code>while</code></td>
+                <td><code>do-while</code></td>
+              </tr>
+              <tr>
+                <td>Use case</td>
+                <td>When condition must be true to run</td>
+                <td>When code must run at least once</td>
+              </tr>
+              <tr>
+                <td>Example syntax</td>
+                <td><code>while (condition) { ... }</code></td>
+                <td><code>do { ... } while (condition);</code></td>
+              </tr>
+            </tbody>
+          </table>
         </section>
       </main>
     </div>
     <footer class="site-footer">
-      &copy; 2024 PHP Tutorial. All rights reserved. | Crafted with 499 by
-      YourName
+      &copy; 2024 PHP Tutorial. All rights reserved. | Crafted with
+      <span style="color: #ff6b6b; font-weight: bold">&#10084;</span> by
+      <span class="footer-author">Khaled Amin</span>
     </footer>
     <script src="script.js"></script>
   </body>

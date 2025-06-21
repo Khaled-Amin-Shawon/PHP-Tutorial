@@ -30,7 +30,7 @@
         <a href="magic-constants.html">PHP Magic Constants</a>
         <a href="operators.html">PHP Operators</a>
         <a href="if-else.html">PHP If...Else...Elseif</a>
-        <a href="switch.html">PHP Switch</a>
+        <a href="switch.html" class="active">PHP Switch</a>
         <a href="loops.html">PHP Loops</a>
         <a href="functions.html">PHP Functions</a>
         <a href="arrays.html">PHP Arrays</a>
@@ -43,44 +43,62 @@
       <main>
         <section class="section" id="switch">
           <h2>PHP Switch</h2>
-          <p>
-            The <code>switch</code> statement is used to perform different
-            actions based on different conditions.
-          </p>
-          <pre>
+        <!-- INSERT_YOUR_CODE -->
+        <p>
+          The <code>switch</code> statement in PHP is used to perform different actions based on different conditions. It is an alternative to using multiple <code>if...elseif...else</code> statements when you need to compare the same variable or expression with many different values.
+        </p>
+        <h3>Syntax</h3>
+        <pre>
 &lt;?php
-    $color = "red";
-    switch ($color) {
-        case "red":
-            echo "Color is red";
-            break;
-        case "blue":
-            echo "Color is blue";
-            break;
-        default:
-            echo "Color is neither red nor blue";
-    }
-?&gt;</pre
-          >
-          <p class="bangla">
-            <code>switch</code> স্টেটমেন্ট ব্যবহার করে বিভিন্ন শর্ত অনুযায়ী
-            বিভিন্ন কাজ করা যায়।
-          </p>
-          <pre class="bangla">
+switch (expression) {
+    case value1:
+        // code to execute if expression == value1
+        break;
+    case value2:
+        // code to execute if expression == value2
+        break;
+    // more cases...
+    default:
+        // code to execute if no case matches
+}
+?&gt;
+        </pre>
+
+        <h3>Example</h3>
+        <pre>
 &lt;?php
-    $color = "লাল";
-    switch ($color) {
-        case "লাল":
-            echo "রঙ লাল";
-            break;
-        case "নীল":
-            echo "রঙ নীল";
-            break;
-        default:
-            echo "রঙ লাল বা নীল নয়";
-    }
-?&gt;</pre
-          >
+$day = "Tuesday";
+
+switch ($day) {
+    case "Monday":
+        echo "Today is Monday";
+        break;
+    case "Tuesday":
+        echo "Today is Tuesday";
+        break;
+    case "Wednesday":
+        echo "Today is Wednesday";
+        break;
+    default:
+        echo "It's another day";
+}
+?&gt;
+        </pre>
+
+        <ul>
+          <li>
+            <strong>case</strong>: Each <code>case</code> checks a value. If it matches, the code block runs and stops at the <code>break</code> statement.
+          </li>
+          <li>
+            <strong>default</strong>: If no <code>case</code> matches, the <code>default</code> block runs.
+          </li>
+        </ul>
+
+        <h3>When to Use switch?</h3>
+        <ul>
+          <li>When you have a single variable/expression to compare against multiple possible values.</li>
+          <li>It makes code cleaner and easier to read than many <code>if...elseif...else</code> statements.</li>
+        </ul>
         </section>
       </main>
     </div>
