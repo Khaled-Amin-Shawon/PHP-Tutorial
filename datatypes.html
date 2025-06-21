@@ -113,11 +113,13 @@ echo gettype($var); // Outputs: string
 ?&gt;
         </pre
           >
-        <h3>PHP Integer</h3>
-        <p>
-          An <strong>integer</strong> is a whole number (positive, negative, or zero) without decimals. In PHP, integers can be specified in decimal, hexadecimal, or octal notation.
-        </p>
-        <pre>
+          <h3>PHP Integer</h3>
+          <p>
+            An <strong>integer</strong> is a whole number (positive, negative,
+            or zero) without decimals. In PHP, integers can be specified in
+            decimal, hexadecimal, or octal notation.
+          </p>
+          <pre>
 &lt;?php
 $x = 42;         // decimal number
 $y = 0x2A;       // hexadecimal number (42 in decimal)
@@ -127,16 +129,19 @@ echo $x; // Outputs: 42
 echo $y; // Outputs: 42
 echo $z; // Outputs: 42
 ?&gt;
-        </pre>
-        <p class="bangla">
-          <strong>ইন্টিজার</strong> হচ্ছে সম্পূর্ণ সংখ্যা (দশমিক ছাড়া)। PHP-তে ইন্টিজার দশমিক, হেক্সাডেসিমাল বা অক্টাল ফরম্যাটে লেখা যায়।
-        </p>
+        </pre
+          >
+          <p class="bangla">
+            <strong>ইন্টিজার</strong> হচ্ছে সম্পূর্ণ সংখ্যা (দশমিক ছাড়া)।
+            PHP-তে ইন্টিজার দশমিক, হেক্সাডেসিমাল বা অক্টাল ফরম্যাটে লেখা যায়।
+          </p>
 
-        <h3>PHP Float</h3>
-        <p>
-          A <strong>float</strong> (also called double or floating point number) is a number with a decimal point or in exponential form.
-        </p>
-        <pre>
+          <h3>PHP Float</h3>
+          <p>
+            A <strong>float</strong> (also called double or floating point
+            number) is a number with a decimal point or in exponential form.
+          </p>
+          <pre>
 &lt;?php
 $a = 3.1416;      // float
 $b = 2.5e3;       // float (2500)
@@ -146,16 +151,20 @@ echo $a; // Outputs: 3.1416
 echo $b; // Outputs: 2500
 echo $c; // Outputs: 7.0E-10
 ?&gt;
-        </pre>
-        <p class="bangla">
-          <strong>ফ্লোট</strong> হচ্ছে দশমিক সংখ্যা বা এক্সপোনেনশিয়াল ফরম্যাটে লেখা সংখ্যা। যেমন: 3.14, 2.5e3 ইত্যাদি।
-        </p>
+        </pre
+          >
+          <p class="bangla">
+            <strong>ফ্লোট</strong> হচ্ছে দশমিক সংখ্যা বা এক্সপোনেনশিয়াল
+            ফরম্যাটে লেখা সংখ্যা। যেমন: 3.14, 2.5e3 ইত্যাদি।
+          </p>
 
-        <h3>PHP Boolean</h3>
-        <p>
-          A <strong>boolean</strong> represents two possible states: <code>true</code> or <code>false</code>. Booleans are often used in conditional testing.
-        </p>
-        <pre>
+          <h3>PHP Boolean</h3>
+          <p>
+            A <strong>boolean</strong> represents two possible states:
+            <code>true</code> or <code>false</code>. Booleans are often used in
+            conditional testing.
+          </p>
+          <pre>
 &lt;?php
 $is_logged_in = true;
 $is_admin = false;
@@ -166,15 +175,20 @@ if ($is_logged_in) {
     echo "Please log in.";
 }
 ?&gt;
-        </pre>
-        <p class="bangla">
-          <strong>বুলিয়ান</strong> ডেটা টাইপে শুধু দুইটি মান থাকতে পারে: <code>true</code> (সত্য) অথবা <code>false</code> (মিথ্যা)। সাধারণত শর্ত যাচাই করার জন্য ব্যবহার হয়।
-        </p>
-        <h3>PHP Object</h3>
-        <p>
-          In PHP, an <strong>object</strong> is an instance of a class. Classes are templates that define properties (variables) and methods (functions) that objects created from the class will have.
-        </p>
-        <pre>
+        </pre
+          >
+          <p class="bangla">
+            <strong>বুলিয়ান</strong> ডেটা টাইপে শুধু দুইটি মান থাকতে পারে:
+            <code>true</code> (সত্য) অথবা <code>false</code> (মিথ্যা)। সাধারণত
+            শর্ত যাচাই করার জন্য ব্যবহার হয়।
+          </p>
+          <h3>PHP Object</h3>
+          <p>
+            In PHP, an <strong>object</strong> is an instance of a class.
+            Classes are templates that define properties (variables) and methods
+            (functions) that objects created from the class will have.
+          </p>
+          <pre>
 &lt;?php
 class Car {
     public $model;
@@ -198,15 +212,24 @@ echo $car1-&gt;getMessage(); // Outputs: The car is a red Volvo.
 echo "&lt;br&gt;";
 echo $car2-&gt;getMessage(); // Outputs: The car is a black BMW.
 ?&gt;
-        </pre>
-        <p class="bangla">
-          <strong>অবজেক্ট</strong> হচ্ছে ক্লাসের একটি নির্দিষ্ট উদাহরণ (instance)। ক্লাসে যেসব প্রপার্টি ও মেথড থাকে, অবজেক্ট সেগুলো পায়। উপরের উদাহরণে <code>Car</code> ক্লাসে <code>$model</code> ও <code>$color</code> প্রপার্টি এবং <code>getMessage()</code> মেথড আছে। <code>__construct()</code> ফাংশনটি অবজেক্ট তৈরি হওয়ার সময় স্বয়ংক্রিয়ভাবে কল হয় এবং প্রপার্টিগুলো সেট করে। প্রতিটি অবজেক্টের মান আলাদা হতে পারে।
-        </p>
-        <h3>PHP NULL Value</h3>
-        <p>
-          The <strong>NULL</strong> data type in PHP can have only one value: <code>NULL</code>. A variable is of type NULL if it has no value assigned to it.
-        </p>
-        <pre>
+        </pre
+          >
+          <p class="bangla">
+            <strong>অবজেক্ট</strong> হচ্ছে ক্লাসের একটি নির্দিষ্ট উদাহরণ
+            (instance)। ক্লাসে যেসব প্রপার্টি ও মেথড থাকে, অবজেক্ট সেগুলো পায়।
+            উপরের উদাহরণে <code>Car</code> ক্লাসে <code>$model</code> ও
+            <code>$color</code> প্রপার্টি এবং <code>getMessage()</code> মেথড
+            আছে। <code>__construct()</code> ফাংশনটি অবজেক্ট তৈরি হওয়ার সময়
+            স্বয়ংক্রিয়ভাবে কল হয় এবং প্রপার্টিগুলো সেট করে। প্রতিটি অবজেক্টের
+            মান আলাদা হতে পারে।
+          </p>
+          <h3>PHP NULL Value</h3>
+          <p>
+            The <strong>NULL</strong> data type in PHP can have only one value:
+            <code>NULL</code>. A variable is of type NULL if it has no value
+            assigned to it.
+          </p>
+          <pre>
 &lt;?php
 $var1 = NULL;
 $var2; // No value assigned, so it is NULL by default
@@ -221,16 +244,23 @@ $var3 = "Hello";
 $var3 = NULL;
 var_dump($var3); // Outputs: NULL
 ?&gt;
-        </pre>
-        <p class="bangla">
-          <strong>NULL</strong> একটি বিশেষ ডেটা টাইপ, যার একমাত্র মান হচ্ছে <code>NULL</code>। কোনো ভ্যারিয়েবলের কোনো মান না থাকলে সেটি NULL হয়। যদি কোনো ভ্যারিয়েবল ডিক্লেয়ার করে মান না দেওয়া হয়, তাহলে সেটি স্বয়ংক্রিয়ভাবে NULL হয়ে যায়। আবার, কোনো ভ্যারিয়েবলের মান মুছে ফেলতে চাইলে সেটিকে <code>NULL</code> সেট করতে পারেন।
-        </p>
-        <h3>Change Data Type</h3>
-        <p>
-          If you assign an integer value to a variable, the type will automatically be an integer.<br>
-          If you assign a string to the same variable, the type will change to a string:
-        </p>
-        <pre>
+        </pre
+          >
+          <p class="bangla">
+            <strong>NULL</strong> একটি বিশেষ ডেটা টাইপ, যার একমাত্র মান হচ্ছে
+            <code>NULL</code>। কোনো ভ্যারিয়েবলের কোনো মান না থাকলে সেটি NULL
+            হয়। যদি কোনো ভ্যারিয়েবল ডিক্লেয়ার করে মান না দেওয়া হয়, তাহলে
+            সেটি স্বয়ংক্রিয়ভাবে NULL হয়ে যায়। আবার, কোনো ভ্যারিয়েবলের মান
+            মুছে ফেলতে চাইলে সেটিকে <code>NULL</code> সেট করতে পারেন।
+          </p>
+          <h3>Change Data Type</h3>
+          <p>
+            If you assign an integer value to a variable, the type will
+            automatically be an integer.<br />
+            If you assign a string to the same variable, the type will change to
+            a string:
+          </p>
+          <pre>
 &lt;?php
 $x = 10;           // $x is now an integer
 var_dump($x);      // Outputs: int(10)
@@ -238,14 +268,22 @@ var_dump($x);      // Outputs: int(10)
 $x = "Hello PHP";  // $x is now a string
 var_dump($x);      // Outputs: string(9) "Hello PHP"
 ?&gt;
-        </pre>
-        <p class="bangla">
-          যদি কোনো ভ্যারিয়েবলে ইন্টিজার মান অ্যাসাইন করেন, তাহলে সেটি স্বয়ংক্রিয়ভাবে ইন্টিজার টাইপ হয়ে যায়।<br>
-          আবার, একই ভ্যারিয়েবলে স্ট্রিং মান অ্যাসাইন করলে টাইপ পরিবর্তন হয়ে স্ট্রিং হয়ে যাবে।
-        </p>
+        </pre
+          >
+          <p class="bangla">
+            যদি কোনো ভ্যারিয়েবলে ইন্টিজার মান অ্যাসাইন করেন, তাহলে সেটি
+            স্বয়ংক্রিয়ভাবে ইন্টিজার টাইপ হয়ে যায়।<br />
+            আবার, একই ভ্যারিয়েবলে স্ট্রিং মান অ্যাসাইন করলে টাইপ পরিবর্তন হয়ে
+            স্ট্রিং হয়ে যাবে।
+          </p>
         </section>
       </main>
     </div>
+    <footer class="site-footer">
+      &copy; 2024 PHP Tutorial. All rights reserved. | Crafted with
+      <span style="color: #ff6b6b; font-weight: bold">&#10084;</span> by
+      <span class="footer-author">Khaled Amin</span>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
